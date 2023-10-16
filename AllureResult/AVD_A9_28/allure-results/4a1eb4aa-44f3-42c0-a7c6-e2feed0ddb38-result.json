@@ -1,0 +1,53 @@
+{
+    "name": "Свернуть вкладку Заявки",
+    "start": 1697453181318,
+    "stop": 1697453181322,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "4a1eb4aa-44f3-42c0-a7c6-e2feed0ddb38",
+    "historyId": "44d34805d3a9693aaa80dd68e81f0fc",
+    "fullName": "ru.iteco.fmhandroid.ui.MainTest.collapseClaimsTab",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "collapseClaimsTab"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

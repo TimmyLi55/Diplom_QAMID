@@ -1,0 +1,53 @@
+{
+    "name": "Переход во все новости с главного экрана",
+    "start": 1697453181392,
+    "stop": 1697453181396,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "3bac26e5-de52-4d96-9f64-aeabc7b36f22",
+    "historyId": "8b44b73d6c00de76dd63d063fb2287d3",
+    "fullName": "ru.iteco.fmhandroid.ui.MainTest.gotoAllNewsFromHomeScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "gotoAllNewsFromHomeScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Создание пустой новости",
+    "start": 1697453181477,
+    "stop": 1697453181481,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "c4f5baf3-7171-49a4-af9e-6a5d3a0f1cd1",
+    "historyId": "9439c82d9082c521a5e5f913011a2e4c",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTests.creatingEmptyNews",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "creatingEmptyNews"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

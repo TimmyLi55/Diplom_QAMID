@@ -1,0 +1,53 @@
+{
+    "name": "Изменение статуса заявки с В работе на Отменена",
+    "start": 1697455158326,
+    "stop": 1697455158329,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "9df1d6e0-bb9a-48a7-a58f-e5338c727563",
+    "historyId": "9bd5a9ea90eb7cea4491e934390b5669",
+    "fullName": "ru.iteco.fmhandroid.ui.ClaimsTest.changeStatusClaimInWorkToCancelled",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "changeStatusClaimInWorkToCancelled"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(475)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

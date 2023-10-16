@@ -1,0 +1,53 @@
+{
+    "name": "Ссылка на пользовательсоке соглашение",
+    "start": 1697453180713,
+    "stop": 1697453180717,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "34b3e6ae-8359-4d15-9ae1-c2b45d6bf3ed",
+    "historyId": "8b91ad1ed9980fd84ef3660f36e03479",
+    "fullName": "ru.iteco.fmhandroid.ui.AboutTests.intentLinkToUserAgreement",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AboutTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "intentLinkToUserAgreement"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AboutTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

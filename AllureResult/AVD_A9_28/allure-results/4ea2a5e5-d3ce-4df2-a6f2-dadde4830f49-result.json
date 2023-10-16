@@ -1,0 +1,53 @@
+{
+    "name": "Неверный пароль",
+    "start": 1697453180786,
+    "stop": 1697453180791,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "4ea2a5e5-d3ce-4df2-a6f2-dadde4830f49",
+    "historyId": "d67a33dda0203da84d60a03c863a1218",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationsTests.invalidPass",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "invalidPass"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Фильтрация созданной новости с категорией \"Объявление\" в панели управления",
+    "start": 1697460683604,
+    "stop": 1697460683611,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "6259bc65-39dc-42b0-b387-541a985ea068",
+    "historyId": "347806b761542aca86cb0e0d97893b05",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTests.filteringNewsInControlPanel",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "filteringNewsInControlPanel"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(347)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"d5934c3200c399c5264e42fa043fc90f","name":"ru.iteco.fmhandroid.ui.ClaimsTest","statistic":{"failed":2,"broken":6,"skipped":0,"passed":5,"unknown":0,"total":13}},{"uid":"cbc41c0a9069e661dc314bf390042a50","name":"ru.iteco.fmhandroid.ui.AuthorizationsTests","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}}]}

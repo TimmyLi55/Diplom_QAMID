@@ -1,0 +1,53 @@
+{
+    "name": "Неверный логин",
+    "start": 1697453180827,
+    "stop": 1697453180833,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "c48a6633-1efb-4d4a-b39f-282d470c2424",
+    "historyId": "28a95892be680ebc9bb1b56e75985e70",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationsTests.invalidLogin",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "invalidLogin"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(233)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

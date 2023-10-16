@@ -1,0 +1,53 @@
+{
+    "name": "Изменение статуса отмененной заявки с нажатием назад системной кнопкой",
+    "start": 1697460683367,
+    "stop": 1697460683371,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "174dfbb7-ea0a-451c-a5d1-4a63b629f0aa",
+    "historyId": "3b94ca4a24f43b829c0b60e418619b6e",
+    "fullName": "ru.iteco.fmhandroid.ui.ClaimsTest.changeStatusClaimCancelled",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "changeStatusClaimCancelled"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(347)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

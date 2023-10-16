@@ -1,0 +1,53 @@
+{
+    "name": "Ссылка на политику конфиденциальности",
+    "start": 1697451754909,
+    "stop": 1697451754916,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7725a620-94a8-4305-85f3-2977795a45a0",
+    "historyId": "6e08ee1c59e67f8579f5993db3d0b8a5",
+    "fullName": "ru.iteco.fmhandroid.ui.AboutTests.intentLinkToPrivacyPolicy",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AboutTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "intentLinkToPrivacyPolicy"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AboutTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(1863)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

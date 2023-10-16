@@ -1,0 +1,552 @@
+{
+    "name": "Добавление пустого комментария к готовой заявке",
+    "start": 1697453501222,
+    "stop": 1697453525026,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "broken",
+    "statusDetails": {
+        "message": "Error performing 'scroll RecyclerView to: holder with view: (view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Добавление комментария 16.10.2023 10:51\")' on view 'view.getId() is <2131230916/ru.iteco.fmhandroid:id/claim_list_recycler_view>'.",
+        "trace": "androidx.test.espresso.PerformException: Error performing 'scroll RecyclerView to: holder with view: (view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Добавление комментария 16.10.2023 10:51\")' on view 'view.getId() is <2131230916/ru.iteco.fmhandroid:id/claim_list_recycler_view>'.\n\tat androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)\n\tat androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)\n\tat androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)\n\tat androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)\n\tat androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)\n\tat androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)\n\tat ru.iteco.fmhandroid.ui.util.GeneralModules.scrollByRecViewWithText(GeneralModules.java:64)\n\tat ru.iteco.fmhandroid.ui.pom.ClaimsScreen.addClaim(ClaimsScreen.java:93)\n\tat ru.iteco.fmhandroid.ui.ClaimsTest.creatingEmptyCommentInClaim(ClaimsTest.java:143)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)\n\tat org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)\n\tat io.qameta.allure.android.runners.AllureAndroidJUnit4.run(AllureAndroidJUnitRunners.kt:29)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)\n\tat androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)\n\tat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2145)\nCaused by: java.lang.RuntimeException: Found more than one sub-view matching holder with view: (view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Добавление комментария 16.10.2023 10:51\")\n\n*** Matched ViewHolder item at position: 336 ***\n\nView Hierarchy:\n+>MaterialCardView{id=2131230914, res-name=claim_list_card, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@f0ad27c, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, is-checked=false, child-count=1} \n|\n+->ConstraintLayout{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@eae9cb9, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, child-count=12} \n|\n+-->AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@42f48fe, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231404, res-name=title_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d3a85f, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Тема, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131230987, res-name=description_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a134b75, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Добавление комментария 16.10.2023 10:51, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230920, res-name=claim_top_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@cb2f70a, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231271, res-name=plan_date_label_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b346b7b, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Плановая дата, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231273, res-name=plan_time_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a336d98, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=10:51, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231272, res-name=plan_date_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@eda29f1, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230918, res-name=claim_middle_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d1179d6, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231043, res-name=executor_name_label_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5144457, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Исполнитель, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231045, res-name=executor_name_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8bdcb44, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230910, res-name=claim_bottom_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@756742d, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f035d62, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n\n\n*** Matched ViewHolder item at position: 337 ***\n\nView Hierarchy:\n+>MaterialCardView{id=2131230914, res-name=claim_list_card, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@f0ad27c, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, is-checked=false, child-count=1} \n|\n+->ConstraintLayout{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@eae9cb9, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, child-count=12} \n|\n+-->AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@42f48fe, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231404, res-name=title_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2d3a85f, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Тема, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131230987, res-name=description_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a134b75, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Добавление комментария 16.10.2023 10:51, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230920, res-name=claim_top_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@cb2f70a, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231271, res-name=plan_date_label_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b346b7b, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Плановая дата, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231273, res-name=plan_time_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a336d98, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=10:51, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231272, res-name=plan_date_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@eda29f1, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230918, res-name=claim_middle_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d1179d6, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->MaterialTextView{id=2131231043, res-name=executor_name_label_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5144457, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=Исполнитель, input-type=0, ime-target=false, has-links=false} \n|\n+-->MaterialTextView{id=2131231045, res-name=executor_name_material_text_view, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8bdcb44, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+-->AppCompatImageView{id=2131230910, res-name=claim_bottom_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@756742d, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f035d62, tag=null, root-is-layout-requested=true, has-input-connection=false, x=0.0, y=0.0} \n\n\tat androidx.test.espresso.contrib.RecyclerViewActions$ScrollToViewAction.perform(RecyclerViewActions.java:372)\n\tat androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:2)\n\tat androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:22)\n\tat androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)\n\tat androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)\n\tat androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat android.os.Handler.handleCallback(Handler.java:873)\n\tat android.os.Handler.dispatchMessage(Handler.java:99)\n\tat android.os.Looper.loop(Looper.java:193)\n\tat android.app.ActivityThread.main(ActivityThread.java:6669)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:493)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)\n"
+    },
+    "steps": [
+        {
+            "name": "Получение текущей(го) date",
+            "start": 1697453501226,
+            "stop": 1697453501226,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Получение текущей(го) time",
+            "start": 1697453501228,
+            "stop": 1697453501228,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Авторизация пользователя с логином <login2> и паролем <password2>",
+            "start": 1697453502493,
+            "stop": 1697453502493,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Логин\"",
+            "start": 1697453502493,
+            "stop": 1697453502493,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131231121> в течении <50000> мс",
+            "start": 1697453502494,
+            "stop": 1697453502494,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Фокусировка на объекте 2131231121",
+            "start": 1697453506640,
+            "stop": 1697453506640,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста login2 в объект 2131231121",
+            "start": 1697453507517,
+            "stop": 1697453507517,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Пароль\"",
+            "start": 1697453508162,
+            "stop": 1697453508163,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Фокусировка на объекте 2131231264",
+            "start": 1697453508163,
+            "stop": 1697453508163,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста password2 в объект 2131231121",
+            "start": 1697453508979,
+            "stop": 1697453508979,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Войти\"",
+            "start": 1697453509569,
+            "stop": 1697453509569,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131230951> в течении <50000> мс",
+            "start": 1697453510012,
+            "stop": 1697453510012,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка текста <Новости> в представлении <2131230951>",
+            "start": 1697453510956,
+            "stop": 1697453510956,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка текста <Заявки> в представлении <2131230949>",
+            "start": 1697453510972,
+            "stop": 1697453510972,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в окно заявок",
+            "start": 1697453510976,
+            "stop": 1697453510976,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131231230> в течении <50000> мс",
+            "start": 1697453510976,
+            "stop": 1697453510976,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Главное меню\"",
+            "start": 1697453513676,
+            "stop": 1697453513677,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Боковое меню\"",
+            "start": 1697453514334,
+            "stop": 1697453514334,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка окна \"Заявки\"",
+            "start": 1697453514780,
+            "stop": 1697453514780,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131230916> в течении <50000> мс",
+            "start": 1697453514787,
+            "stop": 1697453514787,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Добавить заявку\"",
+            "start": 1697453514790,
+            "stop": 1697453514790,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131230939> в течении <5000> мс",
+            "start": 1697453515505,
+            "stop": 1697453515505,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Тема\": Добавление комментария 16.10.2023 10:51",
+            "start": 1697453515507,
+            "stop": 1697453515508,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Исполнитель\": Ivanov Ivan Ivanovich",
+            "start": 1697453515575,
+            "stop": 1697453515575,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Дата\": 16.10.2023",
+            "start": 1697453515629,
+            "stop": 1697453515629,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Время\": 10:51",
+            "start": 1697453515645,
+            "stop": 1697453515645,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Описание\": Тестовое описание 16.10.2023 10:51",
+            "start": 1697453515669,
+            "stop": 1697453515670,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие \"Сохранить\"",
+            "start": 1697453515784,
+            "stop": 1697453515784,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131230916> в течении <50000> мс",
+            "start": 1697453516261,
+            "stop": 1697453516261,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание любого Toast сообщения 5000 мс",
+            "start": 1697453516264,
+            "stop": 1697453516264,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход к тексту <Добавление комментария 16.10.2023 10:51> проверка его наличия",
+            "start": 1697453524270,
+            "stop": 1697453524270,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "d208ef19-2628-4e0e-8f3d-3ba2fb22aca5",
+    "historyId": "cbf80fbc0a4b11723893218b725678b1",
+    "fullName": "ru.iteco.fmhandroid.ui.ClaimsTest.creatingEmptyCommentInClaim",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "creatingEmptyCommentInClaim"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(363)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

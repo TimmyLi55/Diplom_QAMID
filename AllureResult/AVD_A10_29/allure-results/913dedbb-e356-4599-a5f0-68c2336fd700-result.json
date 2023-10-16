@@ -1,0 +1,600 @@
+{
+    "name": "Сортировка новости, фокус вверху списка",
+    "start": 1697461545507,
+    "stop": 1697461561700,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "broken",
+    "statusDetails": {
+        "message": "No views in hierarchy found matching: has item at position 0: (view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Тестирование сортировки 16.10.2023 13:05\")\n\nView Hierarchy:\n+>DecorView{id=-1, visibility=VISIBLE, width=768, height=1280, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x10302fe\n  fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS\n  pfl=FORCE_DRAW_STATUS_BAR_BACKGROUND}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+->LinearLayout{id=-1, visibility=VISIBLE, width=768, height=1184, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@199a86b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-->ViewStub{id=16908692, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@d7f7fc8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->FrameLayout{id=-1, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@4e88861, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=48.0, child-count=1} \n|\n+--->FitWindowsLinearLayout{id=2131230784, res-name=action_bar_root, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@8a86047, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+---->ViewStubCompat{id=2131230812, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@af0d074, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@5c4499d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+----->FragmentContainerView{id=2131231186, res-name=nav_host_fragment, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f6f5e12, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------>FragmentContainerView{id=2131231186, res-name=nav_host_fragment, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@500b9e3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------->LinearLayout{id=-1, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@2847fe0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-------->ConstraintLayout{id=2131230945, res-name=container_custom_app_bar_include_on_fragment_news_list, visibility=VISIBLE, width=768, height=160, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@be1ba0c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=7} \n|\n+--------->AppCompatImageButton{id=2131231123, res-name=main_menu_image_button, desc=Главное меню, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7140f55, tag=null, root-is-layout-requested=false, has-input-connection=false, x=64.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131230735, res-name=about_back_image_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f49d6a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+--------->MaterialTextView{id=2131230973, res-name=custom_app_bar_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a19825b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Первый Московский, input-type=0, ime-target=false, has-links=false} \n|\n+--------->MaterialTextView{id=2131230972, res-name=custom_app_bar_sub_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ff66af8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=ХОСПИС, input-type=0, ime-target=false, has-links=false} \n|\n+--------->AppCompatImageView{id=2131231412, res-name=trademark_image_view, visibility=VISIBLE, width=352, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4534bd1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=160.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131230870, res-name=authorization_image_button, desc=Авторизация, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d372636, tag=null, root-is-layout-requested=false, has-input-connection=false, x=640.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131231247, res-name=our_mission_image_button, desc=Наша Миссия, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1e3e937, tag=null, root-is-layout-requested=false, has-input-connection=false, x=512.0, y=32.0} \n|\n+-------->SwipeRefreshLayout{id=2131231231, res-name=news_list_swipe_refresh, visibility=VISIBLE, width=768, height=976, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@6a33ea4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=160.0, child-count=2} \n|\n+--------->CircleImageView{id=-1, visibility=GONE, width=80, height=80, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@76fd40d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=344.0, y=-80.0} \n|\n+--------->LinearLayout{id=2131230950, res-name=container_list_news_include, visibility=VISIBLE, width=768, height=976, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@c476fc2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+---------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=160, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@83e1d3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=5} \n|\n+----------->MaterialTextView{id=-1, visibility=VISIBLE, width=161, height=54, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@327a110, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=53.0, text=Новости, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialButton{id=2131231329, res-name=sort_news_material_button, desc=Кнопка сортировки списка новостей, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d52a409, tag=null, root-is-layout-requested=false, has-input-connection=false, x=376.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231060, res-name=filter_news_material_button, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@220c60e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=496.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231025, res-name=edit_news_material_button, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@120c82f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=616.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231049, res-name=expand_material_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b4dbe3c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+---------->MaterialTextView{id=2131230858, res-name=all_news_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@e7877c5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Все новости, input-type=0, ime-target=false, has-links=false} \n|\n+---------->ConstraintLayout{id=2131230857, res-name=all_news_cards_block_constraint_layout, visibility=VISIBLE, width=768, height=816, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@ffbb84b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=160.0, child-count=5} \n|\n+----------->RecyclerView{id=2131231230, res-name=news_list_recycler_view, visibility=VISIBLE, width=768, height=816, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5568228, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=6} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@46dcb41, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b0ada7d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bdf4d72, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fd8e5c3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d2d6e40, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Фильтрация 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@96fa179, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@450cebe, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a5a1b1f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@59b2e6c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Фильтрация описание 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ebfdc35, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@2c718ca, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=152.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@ba5f796, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b1e4f17, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@acadf04, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=81, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@96c5ced, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=12.0, text=Тестирование сортировки 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@3c1f722, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@92ec5b3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@498e770, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c3edae9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6ac636e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@2c60a0f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=304.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@2e3382b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@21e3488, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@40dfe21, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@be97246, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Тестовая новость 16.10.2023 11:02, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b5b2c07, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1a61134, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f2b5b5d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@23a6cd2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 11:02, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c7481a3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@42d0ca0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=456.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@26652cc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8939915, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@abac42a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bc6821b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Фильтрация 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b0bcfb8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@da1b191, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@918f8f6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fc124f7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Фильтрация описание 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c8a2f64, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@c9ed5cd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=608.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1d001c9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9230ce, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@671bbef, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=81, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f8a06fc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=12.0, text=Тестирование сортировки 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ecdf185, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f248bda, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9c8280b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9ee96e8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c012101, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@c4f8ba6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=760.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@7d8bc32, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@14b8d83, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@89b5b00, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1dfef39, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Тестовая новость 16.10.2023 16:37, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@652697e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2af7edf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@cdb272c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@74745f5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 16:37, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1279f8a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231033, res-name=empty_news_list_image_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f3729fb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+----------->MaterialTextView{id=2131231034, res-name=empty_news_list_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c698a18, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Здесь пока ничего нет…, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialButton{id=2131231232, res-name=news_retry_material_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7934c71, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Обновить, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->Group{id=2131231032, res-name=empty_news_list_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b682a56, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+->View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=768, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@cc46ad7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1184.0} \n|\n+->View{id=16908335, res-name=statusBarBackground, visibility=VISIBLE, width=768, height=48, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1792fc4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} ",
+        "trace": "androidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: has item at position 0: (view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: is \"Тестирование сортировки 16.10.2023 13:05\")\n\nView Hierarchy:\n+>DecorView{id=-1, visibility=VISIBLE, width=768, height=1280, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x10302fe\n  fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS\n  pfl=FORCE_DRAW_STATUS_BAR_BACKGROUND}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+->LinearLayout{id=-1, visibility=VISIBLE, width=768, height=1184, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@199a86b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-->ViewStub{id=16908692, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@d7f7fc8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->FrameLayout{id=-1, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@4e88861, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=48.0, child-count=1} \n|\n+--->FitWindowsLinearLayout{id=2131230784, res-name=action_bar_root, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@8a86047, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+---->ViewStubCompat{id=2131230812, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@af0d074, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@5c4499d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+----->FragmentContainerView{id=2131231186, res-name=nav_host_fragment, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@f6f5e12, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------>FragmentContainerView{id=2131231186, res-name=nav_host_fragment, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@500b9e3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+------->LinearLayout{id=-1, visibility=VISIBLE, width=768, height=1136, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@2847fe0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-------->ConstraintLayout{id=2131230945, res-name=container_custom_app_bar_include_on_fragment_news_list, visibility=VISIBLE, width=768, height=160, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@be1ba0c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=7} \n|\n+--------->AppCompatImageButton{id=2131231123, res-name=main_menu_image_button, desc=Главное меню, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7140f55, tag=null, root-is-layout-requested=false, has-input-connection=false, x=64.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131230735, res-name=about_back_image_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f49d6a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+--------->MaterialTextView{id=2131230973, res-name=custom_app_bar_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a19825b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Первый Московский, input-type=0, ime-target=false, has-links=false} \n|\n+--------->MaterialTextView{id=2131230972, res-name=custom_app_bar_sub_title_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ff66af8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=ХОСПИС, input-type=0, ime-target=false, has-links=false} \n|\n+--------->AppCompatImageView{id=2131231412, res-name=trademark_image_view, visibility=VISIBLE, width=352, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@4534bd1, tag=null, root-is-layout-requested=false, has-input-connection=false, x=160.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131230870, res-name=authorization_image_button, desc=Авторизация, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d372636, tag=null, root-is-layout-requested=false, has-input-connection=false, x=640.0, y=32.0} \n|\n+--------->AppCompatImageButton{id=2131231247, res-name=our_mission_image_button, desc=Наша Миссия, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1e3e937, tag=null, root-is-layout-requested=false, has-input-connection=false, x=512.0, y=32.0} \n|\n+-------->SwipeRefreshLayout{id=2131231231, res-name=news_list_swipe_refresh, visibility=VISIBLE, width=768, height=976, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@6a33ea4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=160.0, child-count=2} \n|\n+--------->CircleImageView{id=-1, visibility=GONE, width=80, height=80, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@76fd40d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=344.0, y=-80.0} \n|\n+--------->LinearLayout{id=2131230950, res-name=container_list_news_include, visibility=VISIBLE, width=768, height=976, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.view.ViewGroup$LayoutParams@c476fc2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+---------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=160, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@83e1d3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=5} \n|\n+----------->MaterialTextView{id=-1, visibility=VISIBLE, width=161, height=54, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@327a110, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=53.0, text=Новости, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialButton{id=2131231329, res-name=sort_news_material_button, desc=Кнопка сортировки списка новостей, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d52a409, tag=null, root-is-layout-requested=false, has-input-connection=false, x=376.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231060, res-name=filter_news_material_button, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@220c60e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=496.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231025, res-name=edit_news_material_button, visibility=VISIBLE, width=96, height=96, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@120c82f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=616.0, y=32.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->MaterialButton{id=2131231049, res-name=expand_material_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b4dbe3c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+---------->MaterialTextView{id=2131230858, res-name=all_news_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@e7877c5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Все новости, input-type=0, ime-target=false, has-links=false} \n|\n+---------->ConstraintLayout{id=2131230857, res-name=all_news_cards_block_constraint_layout, visibility=VISIBLE, width=768, height=816, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@ffbb84b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=160.0, child-count=5} \n|\n+----------->RecyclerView{id=2131231230, res-name=news_list_recycler_view, visibility=VISIBLE, width=768, height=816, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@5568228, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=6} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@46dcb41, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@b0ada7d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bdf4d72, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fd8e5c3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@d2d6e40, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Фильтрация 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@96fa179, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@450cebe, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@a5a1b1f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@59b2e6c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Фильтрация описание 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ebfdc35, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@2c718ca, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=152.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@ba5f796, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b1e4f17, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@acadf04, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=81, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@96c5ced, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=12.0, text=Тестирование сортировки 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@3c1f722, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@92ec5b3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@498e770, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c3edae9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 13:05, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@6ac636e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@2c60a0f, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=304.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@2e3382b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@21e3488, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@40dfe21, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@be97246, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Тестовая новость 16.10.2023 11:02, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b5b2c07, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1a61134, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f2b5b5d, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@23a6cd2, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 11:02, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c7481a3, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@42d0ca0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=456.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@26652cc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@8939915, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@abac42a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@bc6821b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Фильтрация 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b0bcfb8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@da1b191, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@918f8f6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@fc124f7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Фильтрация описание 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c8a2f64, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@c9ed5cd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=608.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1d001c9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9230ce, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@671bbef, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=81, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f8a06fc, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=12.0, text=Тестирование сортировки 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@ecdf185, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f248bda, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9c8280b, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@9ee96e8, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 11:01, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c012101, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------------>MaterialCardView{id=2131231215, res-name=news_item_material_card_view, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@c4f8ba6, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=760.0, is-checked=false, child-count=1} \n|\n+------------->ConstraintLayout{id=-1, visibility=VISIBLE, width=768, height=140, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@7d8bc32, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=8} \n|\n+-------------->AppCompatImageView{id=2131231427, res-name=view_news_item_image_view, desc=Кнопка для раскрытия карточки новости, visibility=VISIBLE, width=40, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@14b8d83, tag=null, root-is-layout-requested=false, has-input-connection=false, x=696.0, y=32.0} \n|\n+-------------->AppCompatImageView{id=2131230893, res-name=category_icon_image_view, desc=Иконка категории новости, visibility=VISIBLE, width=42, height=40, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@89b5b00, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=32.0} \n|\n+-------------->MaterialTextView{id=2131231229, res-name=news_item_title_text_view, visibility=VISIBLE, width=558, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1dfef39, tag=null, root-is-layout-requested=false, has-input-connection=false, x=106.0, y=31.0, text=Тестовая новость 16.10.2023 16:37, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231210, res-name=news_item_date_text_view, visibility=VISIBLE, width=240, height=36, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@652697e, tag=null, root-is-layout-requested=false, has-input-connection=false, x=528.0, y=104.0, text=16.10.2023, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->AppCompatImageView{id=2131231201, res-name=news_divider_image_view, desc=Разделительная линия, visibility=VISIBLE, width=768, height=4, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@2af7edf, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=138.0} \n|\n+-------------->Group{id=2131231214, res-name=news_item_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@cdb272c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-------------->MaterialTextView{id=2131231213, res-name=news_item_description_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@74745f5, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Тестовое описание 16.10.2023 16:37, input-type=0, ime-target=false, has-links=false} \n|\n+-------------->MaterialTextView{id=2131231206, res-name=news_item_category_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@1279f8a, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+----------->AppCompatImageView{id=2131231033, res-name=empty_news_list_image_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@f3729fb, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+----------->MaterialTextView{id=2131231034, res-name=empty_news_list_text_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@c698a18, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Здесь пока ничего нет…, input-type=0, ime-target=false, has-links=false} \n|\n+----------->MaterialButton{id=2131231232, res-name=news_retry_material_button, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@7934c71, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Обновить, input-type=0, ime-target=false, has-links=false, is-checked=false} \n|\n+----------->Group{id=2131231032, res-name=empty_news_list_group, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams@b682a56, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+->View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=768, height=96, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@cc46ad7, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1184.0} \n|\n+->View{id=16908335, res-name=statusBarBackground, visibility=VISIBLE, width=768, height=48, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@1792fc4, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n\tat dalvik.system.VMStack.getThreadStackTrace(Native Method)\n\tat java.lang.Thread.getStackTrace(Thread.java:1720)\n\tat androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)\n\tat androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)\n\tat androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)\n\tat androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)\n\tat ru.iteco.fmhandroid.ui.util.CustomMatchers.checkTextAtPosition(CustomMatchers.java:107)\n\tat ru.iteco.fmhandroid.ui.NewsTests.sortingNewsFocusTop(NewsTests.java:111)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:80)\n\tat org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)\n\tat io.qameta.allure.android.runners.AllureAndroidJUnit4.run(AllureAndroidJUnitRunners.kt:29)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)\n\tat androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)\n\tat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2189)\n"
+    },
+    "steps": [
+        {
+            "name": "Получение текущей(го) date",
+            "start": 1697461545513,
+            "stop": 1697461545513,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Получение текущей(го) time",
+            "start": 1697461545515,
+            "stop": 1697461545515,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Авторизация пользователя с логином <login2> и паролем <password2>",
+            "start": 1697461546722,
+            "stop": 1697461546722,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Логин\"",
+            "start": 1697461546722,
+            "stop": 1697461546723,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131231121> в течении <50000> мс",
+            "start": 1697461546723,
+            "stop": 1697461546723,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Фокусировка на объекте 2131231121",
+            "start": 1697461550734,
+            "stop": 1697461550734,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста login2 в объект 2131231121",
+            "start": 1697461551373,
+            "stop": 1697461551373,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста в поле \"Пароль\"",
+            "start": 1697461551976,
+            "stop": 1697461551977,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Фокусировка на объекте 2131231264",
+            "start": 1697461551977,
+            "stop": 1697461551977,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста password2 в объект 2131231121",
+            "start": 1697461552731,
+            "stop": 1697461552731,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Войти\"",
+            "start": 1697461553375,
+            "stop": 1697461553380,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131230951> в течении <50000> мс",
+            "start": 1697461553846,
+            "stop": 1697461553846,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка текста <Новости> в представлении <2131230951>",
+            "start": 1697461554877,
+            "stop": 1697461554877,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка текста <Заявки> в представлении <2131230949>",
+            "start": 1697461554887,
+            "stop": 1697461554887,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в окно новостей",
+            "start": 1697461554894,
+            "stop": 1697461554894,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131231230> в течении <50000> мс",
+            "start": 1697461554894,
+            "stop": 1697461554894,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Главное меню\"",
+            "start": 1697461556508,
+            "stop": 1697461556508,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Новости\"",
+            "start": 1697461557120,
+            "stop": 1697461557121,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка перехода в окно \"Новости\"",
+            "start": 1697461557643,
+            "stop": 1697461557644,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие панели управления новостями",
+            "start": 1697461557647,
+            "stop": 1697461557647,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку \"Добавить новость\"",
+            "start": 1697461558401,
+            "stop": 1697461558401,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста <Объявление> в поле тип",
+            "start": 1697461558994,
+            "stop": 1697461558994,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста <Тестирование сортировки 16.10.2023 13:05> в поле наименование",
+            "start": 1697461559028,
+            "stop": 1697461559028,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста <16.10.2023> в поле дата",
+            "start": 1697461559058,
+            "stop": 1697461559059,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста <13:05> в поле время",
+            "start": 1697461559078,
+            "stop": 1697461559078,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод текста <Тестовое описание 16.10.2023 13:05> в поле описание",
+            "start": 1697461559101,
+            "stop": 1697461559101,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ожидание появления представления <2131231230> в течении <20000> мс",
+            "start": 1697461559644,
+            "stop": 1697461559644,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход к тексту <Тестирование сортировки 16.10.2023 13:05> проверка его наличия",
+            "start": 1697461559649,
+            "stop": 1697461559649,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход к тексту <Тестовое описание 16.10.2023 13:05> проверка его наличия",
+            "start": 1697461559967,
+            "stop": 1697461559967,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Главное меню\"",
+            "start": 1697461560093,
+            "stop": 1697461560093,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки \"Новости\"",
+            "start": 1697461560592,
+            "stop": 1697461560592,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка перехода в окно \"Новости\"",
+            "start": 1697461560995,
+            "stop": 1697461560995,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход к тексту <Тестирование сортировки 16.10.2023 13:05> проверка его наличия",
+            "start": 1697461560998,
+            "stop": 1697461560998,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка наличия текста <Тестирование сортировки 16.10.2023 13:05> на позиции <0>",
+            "start": 1697461561045,
+            "stop": 1697461561045,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "913dedbb-e356-4599-a5f0-68c2336fd700",
+    "historyId": "cd92e2a3d8e30ad53c2d5a828877a304",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTests.sortingNewsFocusTop",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "sortingNewsFocusTop"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NewsTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(676)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

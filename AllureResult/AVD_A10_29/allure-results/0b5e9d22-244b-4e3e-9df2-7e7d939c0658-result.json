@@ -1,0 +1,53 @@
+{
+    "name": "Количество слоганов на экране",
+    "start": 1697455158827,
+    "stop": 1697455158830,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "0b5e9d22-244b-4e3e-9df2-7e7d939c0658",
+    "historyId": "316409c2de2e0d541f58371aaa16b71e",
+    "fullName": "ru.iteco.fmhandroid.ui.OurMissionTests.numberOfSlogansOnTheScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.OurMissionTests"
+        },
+        {
+            "name": "testMethod",
+            "value": "numberOfSlogansOnTheScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.OurMissionTests"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: io.qameta.allure.android.runners.AllureAndroidJUnitRunner(475)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
