@@ -14,11 +14,23 @@ import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class AboutScreen {
-    private static final int infoLabelID = R.id.about_company_info_label_text_view;
-    private static final int privacyPolicyLinkID = R.id.about_privacy_policy_value_text_view;
-    private static final int userAgreementLinkID = R.id.about_terms_of_use_value_text_view;
 
-    public static void clickPolicyLink() {
+
+    private final String privacyPolicyLink = "https://vhospice.org/#/privacy-policy";
+    private final String userAgreementLink = "https://vhospice.org/#/terms-of-use";
+    private final int infoLabelID = R.id.about_company_info_label_text_view;
+    private final int privacyPolicyLinkID = R.id.about_privacy_policy_value_text_view;
+    private final int userAgreementLinkID = R.id.about_terms_of_use_value_text_view;
+
+    public String getPrivacyPolicyLink() {
+        return privacyPolicyLink;
+    }
+
+    public String getUserAgreementLink() {
+        return userAgreementLink;
+    }
+
+    public void clickPolicyLink() {
 
         Allure.step("Нажатие по ссылке политики конфиденсальности");
         onView(withId(privacyPolicyLinkID))
@@ -26,7 +38,7 @@ public class AboutScreen {
                 .perform(click());
     }
 
-    public static void clickUserAgreement() {
+    public void clickUserAgreement() {
 
         Allure.step("Нажатие по ссылке пользовательского соглашения");
         onView(withId(userAgreementLinkID))
@@ -35,12 +47,12 @@ public class AboutScreen {
 
     }
 
-    public static void checkIntentLink(String link) {
+    public void checkIntentLink(String link) {
         Allure.step("Проверка перехода по ссылке " + link);
         intended(hasData(link));
     }
 
-    public static void checkingTextInViewOnIfoLabel() {
+    public void checkingTextInViewOnIfoLabel() {
         Allure.step("Проверка открывшейся страницы");
         onView(
                 allOf(withText("© Айтеко, 2022"), withId(infoLabelID),

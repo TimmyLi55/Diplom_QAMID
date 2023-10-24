@@ -4,9 +4,10 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 
 import androidx.test.espresso.action.ViewActions;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -21,70 +22,98 @@ import ru.iteco.fmhandroid.ui.pom.MainScreen;
 import ru.iteco.fmhandroid.ui.pom.OneClaimScreen;
 import ru.iteco.fmhandroid.ui.util.CustomMatchers;
 import ru.iteco.fmhandroid.ui.util.GeneralModules;
-import ru.iteco.fmhandroid.ui.util.Rules;
+import ru.iteco.fmhandroid.ui.util.TestAuthData;
 import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 
 @RunWith(AllureAndroidJUnit4.class)
 
-public class ClaimsTest extends Rules {
+public class ClaimsTest {
+    @Rule
+    public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
+            new ActivityScenarioRule<>(AppActivity.class);
+
     @Before
     public void authorisationAndGoToClaims() {
-        AuthorizationScreen.authorisation(AuthorizationsTests.getValidLogin(), AuthorizationsTests.getValidPassword());
-        MainScreen.goToClaims();
+        authorizationScreen.checkAuthorisationAndLogout();
+        authorizationScreen.authorisation(testAuthData.getValidLogin(), testAuthData.getValidPassword());
+        mainScreen.goToClaims();
     }
 
-    static String currentDate = GeneralModules.getDateTime("date");
-    static String currentTime = GeneralModules.getDateTime("time");
-    static String endDate = "01.01.2022";
-    static String endTime = "00:00";
+
+    AddClaimFilterScreen addClaimFilterScreen = new AddClaimFilterScreen();
+    AddClaimScreen addClaimScreen = new AddClaimScreen();
+    AuthorizationScreen authorizationScreen = new AuthorizationScreen();
+
+    ClaimsScreen claimsScreen = new ClaimsScreen();
+    MainScreen mainScreen = new MainScreen();
+    OneClaimScreen oneClaimScreen = new OneClaimScreen();
+    GeneralModules generalModules = new GeneralModules();
+    CustomMatchers customMatchers = new CustomMatchers();
+    ViewActionWait viewActionWait = new ViewActionWait();
+    TestAuthData testAuthData = new TestAuthData();
+
+    String currentDate = generalModules.getDateTime("date");
+    String currentTime = generalModules.getDateTime("time");
+    String endDate = "01.01.2022";
+    String endTime = "00:00";
+    String titleTestClaim = "Тестовая заявка";
+    String titleTestDescription = "Тестовое описание";
+    String titleMore50Symbols = "Тестирование количества символов в теме заявки тут больше 50";
+    String title50Symbols = "Тестирование количества символов в теме заявки тут";
+    String titleWithElapsedDate = "Заявка с прошедшей датой";
+    String titleWithElapsedTime = "Заявка с прошедшим временем";
+    String textPerformer = "Ivanov Ivan Ivanovich";
+    String titleAddComment = "Добавление комментария";
+    String textComment = "Тестирование комменатрия";
+    String newTextComment = "Измененный комментарий";
+    String newTitleClaimText = "Изменение наименования заявки";
+    String textStatusReset = "Проверка сброса";
+    String titleTestClaimStatus = "Новая заявка для изменения статуса";
 
     @Test
     @DisplayName("Создание пустой заявки")
     public void creatingEmptyClaims() {
-        ClaimsScreen.clickAddNewClaimButton();
-        ClaimsScreen.clickSaveButton();
-        CustomMatchers.checkToast("Заполните пустые поля");
+        claimsScreen.clickAddNewClaimButton();
+        claimsScreen.clickSaveButton();
+        customMatchers.checkToast(addClaimScreen.getToastEmptyFiled());
 
     }
 
     @Test
     @DisplayName("Создание валидной заявки")
     public void creatingValidClaim() {
-        ClaimsScreen.addClaim("Тестовая заявка", currentDate, currentTime, "Тестовое описание");
+        claimsScreen.addClaim(titleTestClaim, currentDate, currentTime, titleTestDescription);
     }
 
 
     @Test
     @DisplayName("Фильтрация по заявке В работе")
     public void filteringClaim() throws InterruptedException {
-
-        String status = "IN_PROGRESS";
-
-        ClaimsScreen.clickFilterButton();
-        AddClaimFilterScreen.clickCheckBoxOpen();
-        AddClaimFilterScreen.clickOkButton();
-        ClaimsScreen.checkingStatusAfterFilterClaims(status, mActivityScenarioRule);
+        claimsScreen.clickFilterButton();
+        addClaimFilterScreen.clickCheckBoxOpen();
+        addClaimFilterScreen.clickOkButton();
+        claimsScreen.checkingStatusAfterFilterClaims(claimsScreen.getStatusInProgress(), mActivityScenarioRule);
 
     }
 
     @Test
     @DisplayName("Создание заявки с наименованием больше 50 символов")
     public void creatingClaimWithNameMore50Characters() {
-        ClaimsScreen.clickAddNewClaimButton();
-        ViewActionWait.waitView(AddClaimScreen.containerFragmentCreateClaimID, 5000);
-        AddClaimScreen.inputTextInFiledTitle("Тестирование количества символов в теме заявки тут больше 50");
-        AddClaimScreen.checkTextInFiled("Тестирование количества символов в теме заявки тут");
+        claimsScreen.clickAddNewClaimButton();
+        viewActionWait.waitView(addClaimScreen.getContainerFragmentCreateClaimID(), addClaimScreen.getWaitLoadTimer());
+        addClaimScreen.inputTextInFiledTitle(titleMore50Symbols);
+        addClaimScreen.checkTextInFiled(title50Symbols);
     }
 
     @Test
     @DisplayName("Создание заявки с прошедшей датой")
     public void creatingClaimWithEndDate() {
 
-        ClaimsScreen.clickAddNewClaimButton();
-        AddClaimScreen.inputTextInFiledTitle("Заявка с прошедшим временем" + " " + currentDate + " " + currentTime);
-        AddClaimScreen.inputTextInFiledPerformer("Ivanov Ivan Ivanovich");
-        AddClaimScreen.setDateOnDateFiled(endDate);
-        CustomMatchers.checkToast("Выбор прошедшей даты невозможен!");
+        claimsScreen.clickAddNewClaimButton();
+        addClaimScreen.inputTextInFiledTitle(titleWithElapsedDate + " " + currentDate + " " + currentTime);
+        addClaimScreen.inputTextInFiledPerformer(textPerformer);
+        addClaimScreen.setDateOnDateFiled(endDate);
+        customMatchers.checkToast(addClaimScreen.getToastElapsedDate());
 
 
     }
@@ -93,101 +122,101 @@ public class ClaimsTest extends Rules {
     @DisplayName("Создание заявки с прошедшим временем ")
     public void creatingClaimWithEndTime() {
 
-        ClaimsScreen.clickAddNewClaimButton();
-        AddClaimScreen.inputTextInFiledTitle("Заявка с прошедшим временем" + " " + currentDate + " " + currentTime);
-        AddClaimScreen.inputTextInFiledPerformer("Ivanov Ivan Ivanovich");
-        AddClaimScreen.setDateOnDateFiled(endDate);
-        AddClaimScreen.setTimeOnTimeFiled(endTime);
-        CustomMatchers.checkToast("Выбор прошедшего времени невозможен!");
+        claimsScreen.clickAddNewClaimButton();
+        addClaimScreen.inputTextInFiledTitle(titleWithElapsedTime + " " + currentDate + " " + currentTime);
+        addClaimScreen.inputTextInFiledPerformer(textPerformer);
+        addClaimScreen.setDateOnDateFiled(endDate);
+        addClaimScreen.setTimeOnTimeFiled(endTime);
+        customMatchers.checkToast(addClaimScreen.getToastElapsedTime());
     }
 
     @Test
     @DisplayName("Добавление комментария к готовой заявке с проверкой даты и времени создания")
     public void creatingCommentInClaim() {
-        ClaimsScreen.addClaim("Добавление комментария", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Добавление комментария" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickAddComment();
-        OneClaimScreen.inputCommentAtFiled("Тестирование комменатрия" + " " + currentTime);
-        OneClaimScreen.clickSaveButton();
-        OneClaimScreen.checkCommentInFiled("Тестирование комменатрия" + " " + currentTime, currentDate, currentTime, mActivityScenarioRule);
+        claimsScreen.addClaim(titleAddComment, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleAddComment + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickAddComment();
+        oneClaimScreen.inputCommentAtFiled(textComment + " " + currentTime);
+        oneClaimScreen.clickSaveButton();
+        oneClaimScreen.checkCommentInFiled(textComment + " " + currentTime, currentDate, currentTime, mActivityScenarioRule);
     }
 
     @Test
     @DisplayName("Редактирование созданной заявки в статусе Открыта")
     public void editingCreatedClaimOpenStatus() {
-        ClaimsScreen.addClaim("Новая заявка", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Новая заявка" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickEditClaimButton();
-        OneClaimScreen.checkTextEditInTitle();
-        AddClaimScreen.inputTextInFiledTitle("Изменение наименования заявки" + " " + currentDate + " " + currentTime);
-        AddClaimScreen.clickSaveButton();
-        OneClaimScreen.clickBackClaimButton();
-        ViewActionWait.waitView(ClaimsScreen.getClaimListRecyclerViewID(), 50000);
-        GeneralModules.scrollByRecViewWithText(ClaimsScreen.getClaimListRecyclerViewID(), "Изменение наименования заявки" + " " + currentDate + " " + currentTime);
+        claimsScreen.addClaim(titleTestClaim, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleTestClaim + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickEditClaimButton();
+        oneClaimScreen.checkTextEditInTitle();
+        addClaimScreen.inputTextInFiledTitle(newTitleClaimText + " " + currentDate + " " + currentTime);
+        addClaimScreen.clickSaveButton();
+        oneClaimScreen.clickBackClaimButton();
+        viewActionWait.waitView(claimsScreen.getClaimListRecyclerViewID(), claimsScreen.getWaitLoadTimer());
+        generalModules.scrollByRecViewWithText(claimsScreen.getClaimListRecyclerViewID(), newTitleClaimText + " " + currentDate + " " + currentTime);
     }
 
     @Test
     @DisplayName("Редактирование созданной заявки в статусе В работе")
     public void editingCreatedClaimInProgressStatus() {
-        ClaimsScreen.addClaim("Новая заявка", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Новая заявка" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickChangeStatusButton();
-        OneClaimScreen.clickButtonChangeStatus("В работу");
-        OneClaimScreen.clickEditClaimButton();
-        CustomMatchers.checkToast("Редактировать Заявку можно только в статусе Открыта.");
+        claimsScreen.addClaim(titleTestClaim, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleTestClaim + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickChangeStatusButton();
+        oneClaimScreen.clickButtonChangeStatus(oneClaimScreen.getStatusInWork());
+        oneClaimScreen.clickEditClaimButton();
+        customMatchers.checkToast(oneClaimScreen.getToastEditClaimInStatus());
     }
 
     @Test
     @DisplayName("Добавление пустого комментария к готовой заявке")
     public void creatingEmptyCommentInClaim() {
-        ClaimsScreen.addClaim("Добавление комментария", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Добавление комментария" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickAddComment();
-        OneClaimScreen.clickSaveButton();
-        CustomMatchers.checkToast("Поле не может быть пустым.");
+        claimsScreen.addClaim(titleAddComment, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleAddComment + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickAddComment();
+        oneClaimScreen.clickSaveButton();
+        customMatchers.checkToast(oneClaimScreen.getToastFiledNotEmpty());
     }
 
     @Test
     @DisplayName("Изменение созданного комментария")
     public void editingCommentInClaim() {
-        ClaimsScreen.addClaim("Добавление комментария", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Добавление комментария" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickAddComment();
-        OneClaimScreen.inputCommentAtFiled("Комментарий" + " " + currentDate);
-        OneClaimScreen.clickSaveButton();
-        OneClaimScreen.scrollAtPositionButtonEditComment(OneClaimScreen.getCommentPositionByTitle("Комментарий" + " " + currentDate, mActivityScenarioRule));
-        OneClaimScreen.updateCommentAtFiled("Комментарий" + " " + currentDate, "Измененный комментарий" + " " + currentDate);
-        OneClaimScreen.clickSaveButton();
-        OneClaimScreen.checkCommentInFiled("Измененный комментарий" + " " + currentDate, currentDate, currentTime, mActivityScenarioRule);
+        claimsScreen.addClaim(titleAddComment, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleAddComment + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickAddComment();
+        oneClaimScreen.inputCommentAtFiled(textComment + " " + currentDate);
+        oneClaimScreen.clickSaveButton();
+        oneClaimScreen.scrollAtPositionButtonEditComment(oneClaimScreen.getCommentPositionByTitle(textComment + " " + currentDate, mActivityScenarioRule));
+        oneClaimScreen.updateCommentAtFiled(textComment + " " + currentDate, newTextComment + " " + currentDate);
+        oneClaimScreen.clickSaveButton();
+        oneClaimScreen.checkCommentInFiled(newTextComment + " " + currentDate, currentDate, currentTime, mActivityScenarioRule);
 
     }
 
     @Test
     @DisplayName("Изменение статуса заявки с В работе на Отменена")
     public void changeStatusClaimInWorkToCancelled() {
-        ClaimsScreen.addClaim("Новая заявка для изменения статуса", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Новая заявка для изменения статуса" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickChangeStatusButton();
-        OneClaimScreen.clickButtonChangeStatus("В работу");
-        OneClaimScreen.clickChangeStatusButton();
-        OneClaimScreen.clickButtonChangeStatus("Сбросить");
-        OneClaimScreen.inputCommentStatusCanceled("Проверка сброса");
-        OneClaimScreen.checkStatusAtClaim("Отменена");
+        claimsScreen.addClaim(titleTestClaimStatus, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleTestClaimStatus + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickChangeStatusButton();
+        oneClaimScreen.clickButtonChangeStatus(oneClaimScreen.getStatusInWork());
+        oneClaimScreen.clickChangeStatusButton();
+        oneClaimScreen.clickButtonChangeStatus(oneClaimScreen.getStatusReset());
+        oneClaimScreen.inputCommentStatusCanceled(textStatusReset);
+        oneClaimScreen.checkStatusAtClaim(oneClaimScreen.getStatusFinalCanceled());
     }
 
     @Test
     @DisplayName("Изменение статуса отмененной заявки с нажатием назад системной кнопкой")
     public void changeStatusClaimCancelled() {
-        ClaimsScreen.addClaim("Заявка для изменения на Отмена", currentDate, currentTime, "Тестовое описание");
-        ClaimsScreen.clickAtPositionRVClaims(ClaimsScreen.getClaimPositionByTitle("Заявка для изменения на Отмена" + " " + currentDate + " " + currentTime, mActivityScenarioRule));
-        OneClaimScreen.clickChangeStatusButton();
-        OneClaimScreen.clickButtonChangeStatus("Отменить");
-        OneClaimScreen.checkStatusAtClaim("Отменена");
-        ViewActionWait.waitView(OneClaimScreen.statusLabelTextViewID, 50000);
-        OneClaimScreen.clickChangeStatusButton();
+        claimsScreen.addClaim(titleTestClaimStatus, currentDate, currentTime, titleTestDescription);
+        claimsScreen.clickAtPositionRVClaims(claimsScreen.getClaimPositionByTitle(titleTestClaimStatus + " " + currentDate + " " + currentTime, mActivityScenarioRule));
+        oneClaimScreen.clickChangeStatusButton();
+        oneClaimScreen.clickButtonChangeStatus(oneClaimScreen.getStringCancel());
+        oneClaimScreen.checkStatusAtClaim(oneClaimScreen.getStatusFinalCanceled());
+        viewActionWait.waitView(oneClaimScreen.getStatusLabelTextViewID(), oneClaimScreen.getWaitLoadTimer());
+        oneClaimScreen.clickChangeStatusButton();
         Allure.step("Нажатие системной кнопки назад");
         onView(isRoot()).perform(ViewActions.pressBack());
-        ViewActionWait.waitView(ClaimsScreen.getClaimListRecyclerViewID(), 50000);
+        viewActionWait.waitView(claimsScreen.getClaimListRecyclerViewID(), claimsScreen.getWaitLoadTimer());
     }
 
 }

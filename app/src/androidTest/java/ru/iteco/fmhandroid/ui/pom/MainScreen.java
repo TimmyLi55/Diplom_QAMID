@@ -25,46 +25,55 @@ import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 
 public class MainScreen {
-    private static final int newsListID = R.id.container_list_news_include_on_fragment_main;
-    private static final int claimListID = R.id.container_list_claim_include_on_fragment_main;
 
-    private static final int ourMissionID = R.id.our_mission_image_button;
+    ClaimsScreen claimsScreen = new ClaimsScreen();
+    NewsScreen newsScreen = new NewsScreen();
+    ViewActionWait viewActionWait = new ViewActionWait();
+    private final int waitLoadTimer = 50000;
+    private final int newsListID = R.id.container_list_news_include_on_fragment_main;
+    private final int claimListID = R.id.container_list_claim_include_on_fragment_main;
+    private final int ourMissionID = R.id.our_mission_image_button;
+    private final int mainMenuID = R.id.main_menu_image_button;
+    private final int newsListRecViewID = R.id.news_list_recycler_view;
+    private final int claimListRecViewID = R.id.claim_list_recycler_view;
+    private final int expandMaterialButtonID = R.id.expand_material_button;
+    private final int allNewsButtonID = R.id.all_news_text_view;
+    private final int allClaimsButtonID = R.id.all_claims_text_view;
+    private final int addNewClaimButtonID = R.id.add_new_claim_material_button;
 
-    private static final int mainMenuID = R.id.main_menu_image_button;
-    private static final int newsListRecViewID = R.id.news_list_recycler_view;
-    private static final int claimListRecViewID = R.id.claim_list_recycler_view;
+    private final int authorizationImageButtonID = R.id.authorization_image_button;
 
-    private static final int expandMaterialButtonID = R.id.expand_material_button;
-    public static final int allNewsButtonID = R.id.all_news_text_view;
-    public static final int allClaimsButtonID = R.id.all_claims_text_view;
+    private final int containerCustomAppBarIncludeOnFragmentMainID = R.id.container_custom_app_bar_include_on_fragment_main;
 
-    public static final int addNewClaimButtonID = R.id.add_new_claim_material_button;
+    public int getWaitLoadTimer() {
+        return waitLoadTimer;
+    }
 
-    public static int getExpandMaterialButtonID() {
+    public int getExpandMaterialButtonID() {
         return expandMaterialButtonID;
     }
 
-    public static int getClaimListRecViewID() {
+    public int getClaimListRecViewID() {
 
         return claimListRecViewID;
     }
 
-    public static int getNewsListRecViewID() {
+    public int getNewsListRecViewID() {
 
         return newsListRecViewID;
     }
 
-    public static int getNewsList() {
+    public int getNewsList() {
 
         return newsListID;
     }
 
-    public static int getClaimList() {
+    public int getClaimList() {
 
         return claimListID;
     }
 
-    public static void checkingTextInView(int view, String text) {
+    public void checkingTextInView(int view, String text) {
         Allure.step("Проверка текста <" + text + "> в представлении <" + view + ">");
         onView(
                 allOf(withText(text),
@@ -73,7 +82,7 @@ public class MainScreen {
 
     }
 
-    public static void clickMainMenu() {
+    public void clickMainMenu() {
         Allure.step("Нажатие кнопки \"Главное меню\"");
         onView(withId(mainMenuID))
                 .check(matches(isDisplayed()))
@@ -81,7 +90,7 @@ public class MainScreen {
 
     }
 
-    public static void clickOurMission() {
+    public void clickOurMission() {
         Allure.step("Нажатие кнопки \"Наша миссия\"");
         onView(withId(ourMissionID))
                 .check(matches(isDisplayed()))
@@ -90,72 +99,69 @@ public class MainScreen {
 
     }
 
-    public static void clickContentMenuAboutApp() {
+    public void clickContentMenuAboutApp() {
         Allure.step("Нажатие кнопки \"О приложении\"");
         ViewInteraction content = onView(allOf(withId(android.R.id.title), withText("О приложении")));
         content.check(matches(isDisplayed())).perform(click());
     }
 
-    public static void goToNews() {
+    public void goToNews() {
         Allure.step("Переход в окно новостей");
-        ViewActionWait.waitView(MainScreen.getNewsListRecViewID(), 50000);
-        MainScreen.clickMainMenu();
-        MainScreen.clickContentMenuNews();
-        NewsScreen.checkingTextInViewAtTitle();
+        viewActionWait.waitView(getNewsListRecViewID(), waitLoadTimer);
+        clickMainMenu();
+        clickContentMenuNews();
+        newsScreen.checkingTextInViewAtTitle();
     }
 
-    public static void goToClaims() {
+    public void goToClaims() {
         Allure.step("Переход в окно заявок");
-        ViewActionWait.waitView(MainScreen.getNewsListRecViewID(), 50000);
-        MainScreen.clickMainMenu();
-        MainScreen.clickContentMenuClaims();
-        ClaimsScreen.checkingTextInViewAtTitle();
-        ViewActionWait.waitView(ClaimsScreen.getClaimListRecyclerViewID(), 50000);
+        viewActionWait.waitView(getNewsListRecViewID(), waitLoadTimer);
+        clickMainMenu();
+        clickContentMenuClaims();
+        claimsScreen.checkingTextInViewAtTitle();
+        viewActionWait.waitView(claimsScreen.getClaimListRecyclerViewID(), 50000);
     }
 
-    public static void clickContentMenuNews() {
+    public void clickContentMenuNews() {
         Allure.step("Нажатие кнопки \"Новости\"");
         ViewInteraction content = onView(allOf(withId(android.R.id.title), withText("Новости")));
         content.check(matches(isDisplayed())).perform(click());
     }
 
-    public static void clickContentMenuClaims() {
+    public void clickContentMenuClaims() {
         Allure.step("Нажатие кнопки \"Боковое меню\"");
-        try {
-            ViewInteraction content = onView(allOf(withId(android.R.id.title), withText("Заявки")));
-            content.check(matches(isDisplayed())).perform(click());
 
-        } catch (NoMatchingViewException e) {
-            System.out.println("Объект" + android.R.id.title + " с текстом" + "Новости" + "не найден на экране");
-        }
+        ViewInteraction content = onView(allOf(withId(android.R.id.title), withText("Заявки")));
+        content.check(matches(isDisplayed())).perform(click());
+
     }
 
-    public static void scrollByText(int id, String text) {
+    public void scrollByText(int id, String text) {
         onView(withId(id))
                 .perform(scrollTo(hasDescendant(withText(text))))
                 .check(matches(isDisplayed()));
     }
 
-    public static void swipeUpScreen() {
+    public void swipeUpScreen() {
         Allure.step("Свайп по экрану вверх");
-        onView(withId(MainScreen.getNewsListRecViewID())).perform(swipeUp());
+        onView(withId(getNewsListRecViewID())).perform(swipeUp());
     }
 
-    public static void clickCollapseNewsButton() {
+    public void clickCollapseNewsButton() {
         Allure.step("Свернуть вкладку новости");
         onView(allOf(withId(expandMaterialButtonID),
                 childAtPosition(childAtPosition(withId(newsListID), 0), 4), isDisplayed()))
                 .perform(click());
     }
 
-    public static void clickCollapseClaimButton() {
+    public void clickCollapseClaimButton() {
         Allure.step("Свернуть вкладку заявки");
         onView(allOf(withId(expandMaterialButtonID),
                 childAtPosition(childAtPosition(withId(claimListID), 0), 3), isDisplayed()))
                 .perform(click());
     }
 
-    public static void clickButtonAllNews() {
+    public void clickButtonAllNews() {
         Allure.step("Нажатие кнопки \"Все новости\"");
         onView(allOf(withId(allNewsButtonID), withText("Все новости"),
                 childAtPosition(
@@ -166,10 +172,9 @@ public class MainScreen {
                         1),
                 isDisplayed()))
                 .perform(click());
-
     }
 
-    public static void clickButtonAllClaims() {
+    public void clickButtonAllClaims() {
         Allure.step("Нажатие кнопки \"Все заявки\"");
         onView(allOf(withId(allClaimsButtonID), withText("Все заявки"),
                 childAtPosition(
@@ -183,7 +188,7 @@ public class MainScreen {
 
     }
 
-    public static void clickButtonAddNewClaim() {
+    public void clickButtonAddNewClaim() {
         Allure.step("Нажатие кнопки \"Новая заявка\"");
 
         onView(allOf(withId(addNewClaimButtonID), withContentDescription("Кнопка добавления новой заявки"),
@@ -193,6 +198,26 @@ public class MainScreen {
                                 0),
                         2),
                 isDisplayed()))
+                .perform(click());
+    }
+
+    public void clickButtonLogout() {
+        onView(allOf(withId(authorizationImageButtonID), withContentDescription("Авторизация"),
+                childAtPosition(
+                        allOf(withId(containerCustomAppBarIncludeOnFragmentMainID),
+                                childAtPosition(
+                                        withClassName(is("android.widget.LinearLayout")),
+                                        0)),
+                        5),
+                isDisplayed()))
+                .perform(click());
+        onView(allOf(withId(android.R.id.title), withText("Выйти"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()))
                 .perform(click());
     }
 }

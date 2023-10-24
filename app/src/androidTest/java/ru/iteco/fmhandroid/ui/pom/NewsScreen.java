@@ -29,24 +29,33 @@ import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 import ru.iteco.fmhandroid.ui.viewdata.NewsViewData;
 
 public class NewsScreen {
-    private static final int containerListNewsID = R.id.container_list_news_include;
-    public static final int editNewsButton = R.id.edit_news_material_button;
-    public static final int addNewsImageView = R.id.add_news_image_view;
-    public static final int newsListRecyclerViewID = R.id.news_list_recycler_view;
-    public static final int filterNewsMaterialButton = R.id.filter_news_material_button;
-    public static final int sortNewsMaterialButton = R.id.sort_news_material_button;
 
-    public static int getContainerListNewsID() {
+    AddNewsScreen addNewsScreen = new AddNewsScreen();
+    GeneralModules generalModules = new GeneralModules();
+    ViewActionWait viewActionWait = new ViewActionWait();
+    private static final int containerListNewsID = R.id.container_list_news_include;
+    private static final int editNewsButton = R.id.edit_news_material_button;
+    private static final int addNewsImageView = R.id.add_news_image_view;
+    private static final int newsListRecyclerViewID = R.id.news_list_recycler_view;
+    private static final int filterNewsMaterialButton = R.id.filter_news_material_button;
+    private static final int sortNewsMaterialButton = R.id.sort_news_material_button;
+    private final int waitLoadTimer = 50000;
+
+    public int getWaitLoadTimer() {
+        return waitLoadTimer;
+    }
+
+    public int getContainerListNewsID() {
 
         return containerListNewsID;
     }
 
-    public static int getNewsListRecyclerViewID() {
+    public int getNewsListRecyclerViewID() {
 
         return newsListRecyclerViewID;
     }
 
-    public static void checkingTextInViewAtTitle() {
+    public void checkingTextInViewAtTitle() {
         Allure.step("Проверка перехода в окно \"Новости\"");
         onView(
                 allOf(withText("Новости"),
@@ -55,7 +64,7 @@ public class NewsScreen {
 
     }
 
-    public static void clickEditMenuButton() {
+    public void clickEditMenuButton() {
         Allure.step("Нажатие панели управления новостями");
         onView(
                 allOf(withId(editNewsButton),
@@ -68,7 +77,7 @@ public class NewsScreen {
                 .perform(click());
     }
 
-    public static void clickAddNews() {
+    public void clickAddNews() {
         Allure.step("Нажатие на кнопку \"Добавить новость\"");
         onView(
                 allOf(withId(addNewsImageView), withContentDescription("Кнопка добавления новости"),
@@ -82,23 +91,23 @@ public class NewsScreen {
     }
 
 
-    public static void creatingNews(String category, String titleName, String currentDate, String currentTime, String description) {
+    public void creatingNews(String category, String titleName, String currentDate, String currentTime, String description) {
         //Allure.step("Создание новой новости категории <" + category + "> c наименованием <" + titleName + "> датой <" + currentDate + "> времинем <" + currentTime + "> и описанием <" + description + ">");
-        NewsScreen.clickEditMenuButton();
-        NewsScreen.clickAddNews();
-        AddNewsScreen.inputTextInFiledType(category);
-        AddNewsScreen.inputTextInFiledTitle(titleName + " " + currentDate + " " + currentTime);
-        AddNewsScreen.setDateOnDateFiled(currentDate);
-        AddNewsScreen.setTimeOnTimeFiled(currentTime);
-        AddNewsScreen.inputTextInFiledDescription(description + " " + currentDate + " " + currentTime);
-        AddNewsScreen.clickSaveButton();
-        ViewActionWait.waitView(NewsScreen.getNewsListRecyclerViewID(), 20000);
-        GeneralModules.scrollByRecViewWithText(NewsScreen.getNewsListRecyclerViewID(), titleName + " " + currentDate + " " + currentTime);
-        GeneralModules.scrollByRecViewWithText(NewsScreen.getNewsListRecyclerViewID(), description + " " + currentDate + " " + currentTime);
+        clickEditMenuButton();
+        clickAddNews();
+        addNewsScreen.inputTextInFiledType(category);
+        addNewsScreen.inputTextInFiledTitle(titleName + " " + currentDate + " " + currentTime);
+        addNewsScreen.setDateOnDateFiled(currentDate);
+        addNewsScreen.setTimeOnTimeFiled(currentTime);
+        addNewsScreen.inputTextInFiledDescription(description + " " + currentDate + " " + currentTime);
+        addNewsScreen.clickSaveButton();
+        viewActionWait.waitView(getNewsListRecyclerViewID(), waitLoadTimer);
+        generalModules.scrollByRecViewWithText(getNewsListRecyclerViewID(), titleName + " " + currentDate + " " + currentTime);
+        generalModules.scrollByRecViewWithText(getNewsListRecyclerViewID(), description + " " + currentDate + " " + currentTime);
 
     }
 
-    public static void clickFilterButton() {
+    public void clickFilterButton() {
         Allure.step("Нажатие на кнопку \"Фильтр\"");
         onView(
                 allOf(withId(filterNewsMaterialButton),
@@ -106,7 +115,7 @@ public class NewsScreen {
                 .perform(click());
     }
 
-    public static void clickSortButton() throws InterruptedException {
+    public void clickSortButton() throws InterruptedException {
         Allure.step("Нажатие на кнопку \"Сортировать\"");
         onView(
                 allOf(withId(R.id.sort_news_material_button), withContentDescription("Кнопка сортировки списка новостей"),
@@ -120,10 +129,10 @@ public class NewsScreen {
         Thread.sleep(10000);
     }
 
-    public static void checkingTextAtLastPositionOfNewsList(String title, ActivityScenarioRule<AppActivity> myactivity) {
+    public void checkingTextAtLastPositionOfNewsList(String title, ActivityScenarioRule<AppActivity> myactivity) {
         Allure.step("Проверка текста <" + title + "> на последней позиции списка");
         myactivity.getScenario().onActivity(activity -> {
-            RecyclerView recyclerView = activity.findViewById(NewsScreen.getNewsListRecyclerViewID());
+            RecyclerView recyclerView = activity.findViewById(getNewsListRecyclerViewID());
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
             int itemCountEnd = adapter.getItemCount();
             int lastItemPosition = itemCountEnd - 1;
@@ -136,12 +145,12 @@ public class NewsScreen {
         });
     }
 
-    public static void swipeUpScreen(int ID) {
+    public void swipeUpScreen(int ID) {
         Allure.step("Свайп экрана вверх");
         onView(withId(ID)).perform(ViewActions.swipeUp());
     }
 
-    public static void checkTextIsInvisible(String text) {
+    public void checkTextIsInvisible(String text) {
         Allure.step("Проверка что текст <" + text + "> нет на экране");
         onView(withText(text)).check(doesNotExist());
     }

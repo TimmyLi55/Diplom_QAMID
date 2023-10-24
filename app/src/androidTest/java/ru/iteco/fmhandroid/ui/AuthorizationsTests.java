@@ -1,6 +1,10 @@
 package ru.iteco.fmhandroid.ui;
 
 
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -8,30 +12,33 @@ import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.junit4.DisplayName;
 import ru.iteco.fmhandroid.ui.pom.AuthorizationScreen;
 import ru.iteco.fmhandroid.ui.util.CustomMatchers;
-import ru.iteco.fmhandroid.ui.util.Rules;
+import ru.iteco.fmhandroid.ui.util.TestAuthData;
 import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 
 @RunWith(AllureAndroidJUnit4.class)
 
-public class AuthorizationsTests extends Rules {
-    private static String validLogin = "login2";
-    private static String invalidLogin = "login1";
-    private static String validPassword = "password2";
-    private static String invalidPassword = "password1";
+public class AuthorizationsTests {
 
-    public static String getValidLogin() {
-        return validLogin;
+
+    @Rule
+    public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
+            new ActivityScenarioRule<>(AppActivity.class);
+    @Before
+    public void checkLogout(){
+        authorizationScreen.checkAuthorisationAndLogout();
     }
 
-    public static String getValidPassword() {
-        return validPassword;
-    }
+    AuthorizationScreen authorizationScreen = new AuthorizationScreen();
+    CustomMatchers customMatchers = new CustomMatchers();
+    ViewActionWait viewActionWait = new ViewActionWait();
+    TestAuthData testAuthData = new TestAuthData();
+
 
     @Test
     @DisplayName("Валидный логин и пароль")
     public void validLoginAndPassword() {
 
-        AuthorizationScreen.authorisation(validLogin, validPassword);
+        authorizationScreen.authorisation(testAuthData.getValidLogin(), testAuthData.getValidPassword());
 
     }
 
@@ -39,9 +46,9 @@ public class AuthorizationsTests extends Rules {
     @DisplayName("Пустой логин и пароль")
     public void emptyLoginAndPassword() {
 
-        ViewActionWait.waitView(AuthorizationScreen.getButtonLoginID(), 10000);
-        AuthorizationScreen.clickLoginButton();
-        CustomMatchers.checkToast("Логин и пароль не могут быть пустыми");
+        viewActionWait.waitView(authorizationScreen.getButtonLoginID(), authorizationScreen.getWaitLoadTimer());
+        authorizationScreen.clickLoginButton();
+        customMatchers.checkToast(authorizationScreen.getToastByEmpty());
 
     }
 
@@ -49,19 +56,19 @@ public class AuthorizationsTests extends Rules {
     @DisplayName("Неверный логин")
     public void invalidLogin() {
 
-        AuthorizationScreen.inputOnFieldLogin(invalidLogin);
-        AuthorizationScreen.inputOnFieldPassword(validPassword);
-        AuthorizationScreen.clickLoginButton();
-        CustomMatchers.checkToast("Неверный логин или пароль");
+        authorizationScreen.inputOnFieldLogin(testAuthData.getInvalidLogin());
+        authorizationScreen.inputOnFieldPassword(testAuthData.getValidPassword());
+        authorizationScreen.clickLoginButton();
+        customMatchers.checkToast(authorizationScreen.getToastByErrorLoginPass());
     }
 
     @Test
     @DisplayName("Неверный пароль")
     public void invalidPass() {
 
-        AuthorizationScreen.inputOnFieldLogin(validLogin);
-        AuthorizationScreen.inputOnFieldPassword(invalidPassword);
-        AuthorizationScreen.clickLoginButton();
-        CustomMatchers.checkToast("Неверный логин или пароль");
+        authorizationScreen.inputOnFieldLogin(testAuthData.getInvalidLogin());
+        authorizationScreen.inputOnFieldPassword(testAuthData.getInvalidPassword());
+        authorizationScreen.clickLoginButton();
+        customMatchers.checkToast(authorizationScreen.getToastByErrorLoginPass());
     }
 }

@@ -27,22 +27,44 @@ import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class AddClaimScreen {
-    private static final int customTitleTextViewID = R.id.custom_app_bar_sub_title_text_view;
-    public static final int containerFragmentCreateClaimID = R.id.container_custom_app_bar_include_on_fragment_create_edit_claim;
-    public static final int titleEditTextID = R.id.title_edit_text;
+    private final int customTitleTextViewID = R.id.custom_app_bar_sub_title_text_view;
 
 
-    public static final int dateInPlanTextInputID = R.id.date_in_plan_text_input_edit_text;
+    private final int containerFragmentCreateClaimID = R.id.container_custom_app_bar_include_on_fragment_create_edit_claim;
+    private final int titleEditTextID = R.id.title_edit_text;
+    private final int dateInPlanTextInputID = R.id.date_in_plan_text_input_edit_text;
+    private final int timeInPlanTextInputID = R.id.time_in_plan_text_input_edit_text;
+    private final int descriptionEditTextID = R.id.description_edit_text;
+    private final int saveButtonID = R.id.save_button;
+    private final int executorDropMenuID = R.id.executor_drop_menu_auto_complete_text_view;
 
-    public static final int timeInPlanTextInputID = R.id.time_in_plan_text_input_edit_text;
+    private final String toastEmptyFiled = "Заполните пустые поля";
+    private final String toastElapsedDate = "Выбор прошедшей даты невозможен!";
+    private final String toastElapsedTime = "Выбор прошедшего времени невозможен!";
 
-    public static final int descriptionEditTextID = R.id.description_edit_text;
+    private final int waitLoadTimer = 50000;
 
-    public static final int saveButtonID = R.id.save_button;
+    public String getToastElapsedTime() {
+        return toastElapsedTime;
+    }
 
-    public static final int executorDropMenuID = R.id.executor_drop_menu_auto_complete_text_view;
+    public String getToastElapsedDate() {
+        return toastElapsedDate;
+    }
 
-    public static void checkingTextInViewOnTitle() {
+    public int getWaitLoadTimer() {
+        return waitLoadTimer;
+    }
+
+    public String getToastEmptyFiled() {
+        return toastEmptyFiled;
+    }
+
+    public int getContainerFragmentCreateClaimID() {
+        return containerFragmentCreateClaimID;
+    }
+
+    public void checkingTextInViewOnTitle() {
         Allure.step("Проверка текста \"Заявки\"");
 
         onView(allOf(withId(customTitleTextViewID), withText("Заявки"),
@@ -52,21 +74,21 @@ public class AddClaimScreen {
                 .check(matches(withText("Заявки")));
     }
 
-    public static void inputTextInFiledTitle(String text) {
+    public void inputTextInFiledTitle(String text) {
         Allure.step("Ввод текста в поле \"Тема\": " + text);
         onView(allOf(withId(titleEditTextID),
                 isDisplayed()))
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void inputTextInFiledPerformer(String text) {
+    public void inputTextInFiledPerformer(String text) {
         Allure.step("Ввод текста в поле \"Исполнитель\": " + text);
         onView(allOf(withId(executorDropMenuID),
                 isDisplayed()))
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void setDateOnDateFiled(String date) {
+    public void setDateOnDateFiled(String date) {
         Allure.step("Ввод текста в поле \"Дата\": " + date);
         onView(allOf(withId(dateInPlanTextInputID),
                 isDisplayed()))
@@ -74,27 +96,27 @@ public class AddClaimScreen {
 
     }
 
-    public static void setTimeOnTimeFiled(String time) {
+    public void setTimeOnTimeFiled(String time) {
         Allure.step("Ввод текста в поле \"Время\": " + time);
         onView(allOf(withId(timeInPlanTextInputID),
                 isDisplayed()))
                 .perform(replaceText(time));
     }
 
-    public static void inputTextInFiledDescription(String text) {
+    public void inputTextInFiledDescription(String text) {
         Allure.step("Ввод текста в поле \"Описание\": " + text);
         onView(allOf(withId(descriptionEditTextID),
                 isDisplayed()))
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void clickSaveButton() {
+    public void clickSaveButton() {
         Allure.step("Нажатие \"Сохранить\"");
         onView(allOf(withId(saveButtonID)))
                 .perform(scrollTo(), click());
     }
 
-    public static void checkTextInFiled(String text) {
+    public void checkTextInFiled(String text) {
         Allure.step("Проверка текста: <" + text + "> в поле: " + titleEditTextID);
         onView(allOf(withId(titleEditTextID), isDisplayed()))
                 .check(matches(withText(text)));

@@ -12,10 +12,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.is;
 
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.test.espresso.action.ViewActions;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
 import org.junit.Assert;
@@ -33,24 +31,40 @@ import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 import ru.iteco.fmhandroid.ui.util.WaitToast;
 
 public class ClaimsScreen {
-    private static final int containerListClaimsID = R.id.container_list_claim_include;
-    public static final int addNewClaimButtonID = R.id.add_new_claim_material_button;
-    public static final int saveButtonID = R.id.save_button;
 
-    public static final int claimListRecyclerViewID = R.id.claim_list_recycler_view;
-    public static final int filtersMaterialButtonID = R.id.filters_material_button;
+    AddClaimScreen addClaimScreen = new AddClaimScreen();
+    GeneralModules generalModules = new GeneralModules();
+    ViewActionWait viewActionWait = new ViewActionWait();
+    OneClaimScreen oneClaimScreen = new OneClaimScreen();
+    private final int containerListClaimsID = R.id.container_list_claim_include;
+    private final int addNewClaimButtonID = R.id.add_new_claim_material_button;
+    private final int saveButtonID = R.id.save_button;
+    private final int claimListRecyclerViewID = R.id.claim_list_recycler_view;
+    private final int filtersMaterialButtonID = R.id.filters_material_button;
+    private final int containerCustomAppBarIncludeOnFragmentCreateEditClaim = R.id.container_custom_app_bar_include_on_fragment_create_edit_claim;
 
-    public static int getContainerListClaimsID() {
+    private final String statusInProgress = "IN_PROGRESS";
+    private final int waitLoadTimer = 50000;
+
+    public int getWaitLoadTimer() {
+        return waitLoadTimer;
+    }
+
+    public String getStatusInProgress() {
+        return statusInProgress;
+    }
+
+    public int getContainerListClaimsID() {
 
         return containerListClaimsID;
     }
 
-    public static int getClaimListRecyclerViewID() {
+    public int getClaimListRecyclerViewID() {
 
         return claimListRecyclerViewID;
     }
 
-    public static void checkingTextInViewAtTitle() {
+    public void checkingTextInViewAtTitle() {
         Allure.step("Проверка окна \"Заявки\"");
         onView(
                 allOf(withText("Заявки"),
@@ -59,50 +73,49 @@ public class ClaimsScreen {
 
     }
 
-    public static void clickAddNewClaimButton() {
+    public void clickAddNewClaimButton() {
         Allure.step("Нажатие кнопки \"Добавить заявку\"");
         onView(allOf(withId(addNewClaimButtonID), isDisplayed()))
                 .perform(click());
     }
 
-    public static void clickSaveButton() {
+    public void clickSaveButton() {
         Allure.step("Нажатие кнопки \"Сохранить\"");
         onView(allOf(withId(saveButtonID), withText("Сохранить"), withContentDescription("Сохранить")))
                 .perform(click());
     }
 
-    public static void addClaim(String title, String currentDate, String currentTime, String description) {
-        //Allure.step("Добавление новой заявки с названием: <" + title + "> датой: <" + currentDate + "> временем: <" + currentTime + "> описанием: " + description);
-        ClaimsScreen.clickAddNewClaimButton();
-        ViewActionWait.waitView(R.id.container_custom_app_bar_include_on_fragment_create_edit_claim, 5000);
-        AddClaimScreen.inputTextInFiledTitle(title + " " + currentDate + " " + currentTime);
-        AddClaimScreen.inputTextInFiledPerformer("Ivanov Ivan Ivanovich");
-        AddClaimScreen.setDateOnDateFiled(currentDate);
-        AddClaimScreen.setTimeOnTimeFiled(currentTime);
-        AddClaimScreen.inputTextInFiledDescription(description + " " + currentDate + " " + currentTime);
-        AddClaimScreen.clickSaveButton();
-        ViewActionWait.waitView(ClaimsScreen.getClaimListRecyclerViewID(), 50000);
+    public void addClaim(String title, String currentDate, String currentTime, String description) {
+        clickAddNewClaimButton();
+        viewActionWait.waitView(containerCustomAppBarIncludeOnFragmentCreateEditClaim, 5000);
+        addClaimScreen.inputTextInFiledTitle(title + " " + currentDate + " " + currentTime);
+        addClaimScreen.inputTextInFiledPerformer("Ivanov Ivan Ivanovich");
+        addClaimScreen.setDateOnDateFiled(currentDate);
+        addClaimScreen.setTimeOnTimeFiled(currentTime);
+        addClaimScreen.inputTextInFiledDescription(description + " " + currentDate + " " + currentTime);
+        addClaimScreen.clickSaveButton();
+        viewActionWait.waitView(getClaimListRecyclerViewID(), claimListRecyclerViewID);
         while (true) {
             if (WaitToast.waitForAnyToast(5000)) {
                 Allure.step("При наличии Toast сообщения вызываем обновление списка заявок");
-                swipeDownScreen(ClaimsScreen.getClaimListRecyclerViewID());
+                swipeDownScreen(getClaimListRecyclerViewID());
             } else {
                 break;
             }
         }
-        GeneralModules.scrollByRecViewWithText(ClaimsScreen.getClaimListRecyclerViewID(), title + " " + currentDate + " " + currentTime);
+        generalModules.scrollByRecViewWithText(getClaimListRecyclerViewID(), title + " " + currentDate + " " + currentTime);
     }
 
-    public static void swipeDownScreen(int ID) {
+    public void swipeDownScreen(int ID) {
         Allure.step("Свайп по экрану вниз");
         onView(isRoot()).perform(swipeDown());
 //        //onView(withId(ID)).perform(ViewActions.swipeDown());
     }
 
-    public static void checkingStatusAfterFilterClaims(String status, ActivityScenarioRule<AppActivity> myactivity) {
+    public void checkingStatusAfterFilterClaims(String status, ActivityScenarioRule<AppActivity> myactivity) {
         Allure.step("Проверка статуса всех объектов " + status + " после фильтрации");
         myactivity.getScenario().onActivity(activity -> {
-            RecyclerView recyclerView = activity.findViewById(ClaimsScreen.getClaimListRecyclerViewID());
+            RecyclerView recyclerView = activity.findViewById(getClaimListRecyclerViewID());
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
             ClaimListAdapter claimAdapter = (ClaimListAdapter) adapter;
             List<FullClaim> dataList = claimAdapter.getCurrentList();
@@ -112,27 +125,27 @@ public class ClaimsScreen {
         });
     }
 
-    public static void clickFilterButton() {
+    public void clickFilterButton() {
         Allure.step("Нажатие кнопки \"Фильтровать\"");
         onView(allOf(withId(filtersMaterialButtonID), isDisplayed()))
                 .perform(click());
     }
 
-    public static void clickAtPositionRVClaims(int pos) {
+    public void clickAtPositionRVClaims(int pos) {
         Allure.step("Нажатие по позиции " + pos + " в списке заявок");
         onView(
                 allOf(withId(claimListRecyclerViewID)))
                 .perform(actionOnItemAtPosition(pos, click()));
 
-        ViewActionWait.waitView(OneClaimScreen.statusIconImageViewID, 5000);
+        viewActionWait.waitView(oneClaimScreen.getStatusIconImageViewID(), 5000);
     }
 
-    public static int getClaimPositionByTitle(String title, ActivityScenarioRule<AppActivity> myactivity) {
+    public int getClaimPositionByTitle(String title, ActivityScenarioRule<AppActivity> myactivity) {
         Allure.step("Получение номера позиции заявки по названию: " + title);
         AtomicInteger position = new AtomicInteger(-1);
 
         myactivity.getScenario().onActivity(activity -> {
-            RecyclerView recyclerView = activity.findViewById(ClaimsScreen.getClaimListRecyclerViewID());
+            RecyclerView recyclerView = activity.findViewById(getClaimListRecyclerViewID());
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
             ClaimListAdapter claimAdapter = (ClaimListAdapter) adapter;
             List<FullClaim> dataList = claimAdapter.getCurrentList();

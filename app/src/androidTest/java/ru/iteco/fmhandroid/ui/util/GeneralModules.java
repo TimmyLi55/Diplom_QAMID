@@ -21,6 +21,8 @@ import java.util.Date;
 import java.util.Objects;
 
 import io.qameta.allure.kotlin.Allure;
+import ru.iteco.fmhandroid.ui.pom.AuthorizationScreen;
+import ru.iteco.fmhandroid.ui.pom.MainScreen;
 
 public class GeneralModules {
 
@@ -44,7 +46,7 @@ public class GeneralModules {
         };
     }
 
-    public static String getDateTime(String type) {
+    public String getDateTime(String type) {
         Allure.step("Получение текущей(го) " + type);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
@@ -58,7 +60,7 @@ public class GeneralModules {
         }
     }
 
-    public static void scrollByRecViewWithText(int RVID, String text) {
+    public void scrollByRecViewWithText(int RVID, String text) {
         Allure.step("Переход к тексту <" + text + "> проверка его наличия");
         onView(withId(RVID))
                 .perform(scrollTo(hasDescendant(withText(text))))

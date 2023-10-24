@@ -62,7 +62,7 @@ public class ViewActionWait {
         };
     }
 
-    public static void waitView(int id, int ms) {
+    public void waitView(int id, int ms) {
         Allure.step("Ожидание появления представления <" + id + "> в течении <" + ms + "> мс");
         onView(isRoot()).perform(waitDisplayed(id, ms));
     }

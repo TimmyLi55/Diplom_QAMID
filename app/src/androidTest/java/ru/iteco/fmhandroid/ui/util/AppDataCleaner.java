@@ -15,9 +15,7 @@ public class AppDataCleaner {
             } else {
                 System.err.println("Ошибка при очистке данных приложения " + packageName);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }

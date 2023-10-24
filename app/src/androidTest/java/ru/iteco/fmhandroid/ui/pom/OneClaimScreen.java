@@ -40,43 +40,84 @@ import ru.iteco.fmhandroid.ui.util.ConvertUnixTime;
 import ru.iteco.fmhandroid.ui.util.ViewActionWait;
 
 public class OneClaimScreen {
-    public static final int addCommentImageButtonID = R.id.add_comment_image_button;
-    public static final int commentTextInputID = R.id.comment_text_input_layout;
-    public static final int saveButtonCommentID = R.id.save_button;
-    public static final int commentDescriptionTextViewID = R.id.comment_description_text_view;
-    public static final int commentDateTextViewID = R.id.comment_date_text_view;
-    public static final int editProcessingImageButtonID = R.id.edit_processing_image_button;
 
-    public static final int claimCommentsListRecyclerViewID = R.id.claim_comments_list_recycler_view;
+    ViewActionWait viewActionWait = new ViewActionWait();
 
-    public static final int closeImageButtonID = R.id.close_image_button;
+    private final int addCommentImageButtonID = R.id.add_comment_image_button;
+    private final int commentTextInputID = R.id.comment_text_input_layout;
+    private final int saveButtonCommentID = R.id.save_button;
+    private final int commentDescriptionTextViewID = R.id.comment_description_text_view;
+    private final int commentDateTextViewID = R.id.comment_date_text_view;
+    private final int editProcessingImageButtonID = R.id.edit_processing_image_button;
+    private final int claimCommentsListRecyclerViewID = R.id.claim_comments_list_recycler_view;
+    private final int closeImageButtonID = R.id.close_image_button;
+    private final int statusProcessingImageButtonID = R.id.status_processing_image_button;
+    private final int statusLabelTextViewID = R.id.status_label_text_view;
+    private final int statusIconImageViewID = R.id.status_icon_image_view;
+    private final int editCommentImageButtonID = R.id.edit_comment_image_button;
+    private final int editTextID = R.id.editText;
+    private final int buttonOkID = android.R.id.button1;
+    private final int waitLoadTimer = 50000;
+    private final String toastEditClaimInStatus = "Редактировать Заявку можно только в статусе Открыта.";
 
-    public static final int statusProcessingImageButtonID = R.id.status_processing_image_button;
-    public static final int statusLabelTextViewID = R.id.status_label_text_view;
+    private final String toastFiledNotEmpty = "Поле не может быть пустым.";
 
-    public static final int statusIconImageViewID = R.id.status_icon_image_view;
+    private final String statusInWork = "В работу";
+    private final String statusReset = "Сбросить";
+    private final String stringCancel = "Отменить";
 
-    public static final int editCommentImageButtonID = R.id.edit_comment_image_button;
+    private final String statusFinalCanceled = "Отменена";
 
-    public static final int editTextID = R.id.editText;
+    public int getWaitLoadTimer() {
+        return waitLoadTimer;
+    }
 
-    public static final int buttonOkID = android.R.id.button1;
+    public String getStringCancel() {
+        return stringCancel;
+    }
 
-    public static int getClaimCommentsListRecyclerViewID() {
+    public String getStatusFinalCanceled() {
+        return statusFinalCanceled;
+    }
+
+    public String getStatusInWork() {
+        return statusInWork;
+    }
+
+    public String getStatusReset() {
+        return statusReset;
+    }
+
+    public String getToastFiledNotEmpty() {
+        return toastFiledNotEmpty;
+    }
+
+    public String getToastEditClaimInStatus() {
+        return toastEditClaimInStatus;
+    }
+
+    public int getClaimCommentsListRecyclerViewID() {
         return claimCommentsListRecyclerViewID;
     }
 
+    public int getStatusLabelTextViewID() {
+        return statusLabelTextViewID;
+    }
 
-    public static void clickAddComment() {
+    public int getStatusIconImageViewID() {
+        return statusIconImageViewID;
+    }
+
+    public void clickAddComment() {
         Allure.step("Нажатие \"Добавить комментарий\"");
         onView(isRoot()).perform(ViewActions.swipeUp());
-        ViewActionWait.waitView(addCommentImageButtonID, 7000);
+        viewActionWait.waitView(addCommentImageButtonID, 7000);
         onView(allOf(withId(addCommentImageButtonID), withContentDescription(
                 "кнопка добавления комментария"), isDisplayed()))
                 .perform(click());
     }
 
-    public static void inputCommentAtFiled(String text) {
+    public void inputCommentAtFiled(String text) {
         Allure.step("Ввод комментария: <" + text + "> в поле комментария");
 
         onView(withId(commentTextInputID))
@@ -90,7 +131,7 @@ public class OneClaimScreen {
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void updateCommentAtFiled(String textNow, String textAfter) {
+    public void updateCommentAtFiled(String textNow, String textAfter) {
         Allure.step("Изменение текста коммментария <" + textNow + "> на текст <" + textAfter + ">");
 
         onView(withId(commentTextInputID))
@@ -108,17 +149,17 @@ public class OneClaimScreen {
 
     }
 
-    public static void clickSaveButton() {
+    public void clickSaveButton() {
         Allure.step("Нажатие кнопки \"Сохранить\"");
         onView(allOf(withId(saveButtonCommentID)))
                 .perform(scrollTo(), click());
 
     }
 
-    public static void checkCommentInFiled(String comment, String date, String time, ActivityScenarioRule<AppActivity> myactivity) {
+    public void checkCommentInFiled(String comment, String date, String time, ActivityScenarioRule<AppActivity> myactivity) {
         Allure.step("Проверка комментария <" + comment + "> c датой <" + date + "> временем <" + time + ">");
         myactivity.getScenario().onActivity(activity -> {
-            RecyclerView recyclerView = activity.findViewById(OneClaimScreen.getClaimCommentsListRecyclerViewID());
+            RecyclerView recyclerView = activity.findViewById(getClaimCommentsListRecyclerViewID());
             RecyclerView.Adapter adapter = recyclerView.getAdapter();
             ClaimCommentListAdapter claimAdapter = (ClaimCommentListAdapter) adapter;
             List<ClaimComment> dataList = claimAdapter.getCurrentList();
@@ -133,31 +174,31 @@ public class OneClaimScreen {
         });
     }
 
-    public static void clickChangeStatusButton() {
+    public void clickChangeStatusButton() {
         Allure.step("Нажатие изменить статус заявки");
         onView(isRoot()).perform(ViewActions.swipeUp());
-        ViewActionWait.waitView(statusProcessingImageButtonID, 5000);
+        viewActionWait.waitView(statusProcessingImageButtonID, waitLoadTimer);
         onView(allOf(withId(statusProcessingImageButtonID), withContentDescription("кнопка вызова действия статусной обработки")))
                 .perform(click());
     }
 
-    public static void clickEditClaimButton() {
+    public void clickEditClaimButton() {
         Allure.step("Нажатие изменить заявку");
         onView(isRoot()).perform(ViewActions.swipeUp());
-        ViewActionWait.waitView(editProcessingImageButtonID, 5000);
+        viewActionWait.waitView(editProcessingImageButtonID, waitLoadTimer);
         onView(allOf(withId(editProcessingImageButtonID), withContentDescription("кнопка настройки")))
                 .perform(click());
     }
 
-    public static void clickBackClaimButton() {
+    public void clickBackClaimButton() {
         Allure.step("Нажатие назад из карточки заявки");
         onView(isRoot()).perform(ViewActions.swipeUp());
-        ViewActionWait.waitView(closeImageButtonID, 5000);
+        viewActionWait.waitView(closeImageButtonID, waitLoadTimer);
         onView(allOf(withId(closeImageButtonID), withContentDescription("кнопка закрытия экранной формы")))
                 .perform(click());
     }
 
-    public static void checkTextEditInTitle() {
+    public void checkTextEditInTitle() {
         Allure.step("Проверка окна редактирования заявки");
         onView(allOf(withId(R.id.custom_app_bar_title_text_view), withText("Редактирование"),
                 withParent(allOf(withId(R.id.container_custom_app_bar_include_on_fragment_create_edit_claim),
@@ -166,20 +207,20 @@ public class OneClaimScreen {
                 .check(matches(withText("Редактирование")));
     }
 
-    public static void clickButtonChangeStatus(String status) {
+    public void clickButtonChangeStatus(String status) {
         Allure.step("Выбор статуса <" + status + ">");
         onView(withText(status)).perform(click());
     }
 
-    public static void checkStatusAtClaim(String text) {
+    public void checkStatusAtClaim(String text) {
         Allure.step("Проверка статуса <" + text + "> у заявки");
-        ViewActionWait.waitView(statusIconImageViewID, 5000);
+        viewActionWait.waitView(statusIconImageViewID, waitLoadTimer);
         onView(allOf(withId(statusLabelTextViewID), withParent(withParent(IsInstanceOf.<View>instanceOf(androidx.cardview.widget.CardView.class))),
                 isDisplayed()))
                 .check(matches(withText(text)));
     }
 
-    public static void scrollAtPositionButtonEditComment(int pos) {
+    public void scrollAtPositionButtonEditComment(int pos) {
         Allure.step("Редактирование комментария на позиции <" + pos + ">");
         onView(allOf(withId(claimCommentsListRecyclerViewID)))
                 .perform(actionOnItemAtPosition(pos, scrollTo()));
@@ -193,7 +234,7 @@ public class OneClaimScreen {
                 .perform(click());
     }
 
-    public static void inputCommentStatusCanceled(String reason) {
+    public void inputCommentStatusCanceled(String reason) {
         Allure.step("Ввод комментария причины отмены заявки <" + reason + ">");
         onView(withId(editTextID))
                 .check(matches(isDisplayed()))
@@ -215,7 +256,7 @@ public class OneClaimScreen {
                 .perform(scrollTo(), click());
     }
 
-    public static int getCommentPositionByTitle(String comment, ActivityScenarioRule<AppActivity> myactivity) {
+    public int getCommentPositionByTitle(String comment, ActivityScenarioRule<AppActivity> myactivity) {
         Allure.step("Получение номера позиции комментария по названию <" + comment + ">");
         AtomicInteger position = new AtomicInteger(-1);
 

@@ -31,20 +31,37 @@ import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class AddNewsScreen {
-    private static final int customTitleTextViewID = R.id.custom_app_bar_sub_title_text_view;
-    private static final int containerFragmentCreateClaimID = R.id.container_custom_app_bar_include_on_fragment_create_edit_claim;
+    private final int customTitleTextViewID = R.id.custom_app_bar_sub_title_text_view;
+    private final int containerFragmentCreateClaimID = R.id.container_custom_app_bar_include_on_fragment_create_edit_claim;
+    private final int newsItemCategoryID = R.id.news_item_category_text_auto_complete_text_view;
+    private final int newsItemCategoryTextInputID = R.id.news_item_category_text_input_layout;
+    private final int newsTitleTextInputID = R.id.news_item_title_text_input_edit_text;
+    private final int newsDateTextInputID = R.id.news_item_publish_date_text_input_edit_text;
+    private final int newsTimeTextInputID = R.id.news_item_publish_time_text_input_edit_text;
+    private final int saveButton = R.id.save_button;
 
-    public static final int newsItemCategoryID = R.id.news_item_category_text_auto_complete_text_view;
-    public static final int newsItemCategoryTextInputID = R.id.news_item_category_text_input_layout;
+    private final String toastEmptyFiled = "Заполните пустые поля";
 
-    public static final int newsTitleTextInputID = R.id.news_item_title_text_input_edit_text;
-    public static final int newsDateTextInputID = R.id.news_item_publish_date_text_input_edit_text;
+    private final String toastElapsedDate = "Выбор прошедшей даты невозможен!";
+    private final String toastElapsedTime = "Выбор прошедшего времени невозможен!";
 
-    public static final int newsTimeTextInputID = R.id.news_item_publish_time_text_input_edit_text;
-    public static final int saveButton = R.id.save_button;
+    public String getToastElapsedTime() {
+        return toastElapsedTime;
+    }
 
+    public String getToastElapsedDate() {
+        return toastElapsedDate;
+    }
 
-    public static void clickSaveButton() {
+    public String getToastEmptyFiled() {
+        return toastEmptyFiled;
+    }
+
+    public int getNewsItemCategoryID() {
+        return newsItemCategoryID;
+    }
+
+    public void clickSaveButton() {
         onView(
                 allOf(withId(saveButton), withText("Сохранить"), withContentDescription("Сохранить"),
                         childAtPosition(
@@ -55,7 +72,7 @@ public class AddNewsScreen {
                 .perform(scrollTo(), click());
     }
 
-    public static void inputTextInFiledType(String text) {
+    public void inputTextInFiledType(String text) {
         Allure.step("Ввод текста <" + text + "> в поле тип");
         onView(
                 allOf(withId(newsItemCategoryID),
@@ -63,7 +80,7 @@ public class AddNewsScreen {
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void inputTextInFiledTitle(String text) {
+    public void inputTextInFiledTitle(String text) {
         Allure.step("Ввод текста <" + text + "> в поле наименование");
         onView(
                 allOf(withId(newsTitleTextInputID),
@@ -71,7 +88,7 @@ public class AddNewsScreen {
                 .perform(replaceText(text), closeSoftKeyboard());
     }
 
-    public static void inputTextInFiledDescription(String text) {
+    public void inputTextInFiledDescription(String text) {
         Allure.step("Ввод текста <" + text + "> в поле описание");
         onView(
                 allOf(withId(R.id.news_item_description_text_input_edit_text),
@@ -80,7 +97,7 @@ public class AddNewsScreen {
     }
 
 
-    public static void setDateOnDateFiled(String date) {
+    public void setDateOnDateFiled(String date) {
         Allure.step("Ввод текста <" + date + "> в поле дата");
         onView(allOf(withId(newsDateTextInputID),
                 isDisplayed()))
@@ -88,7 +105,7 @@ public class AddNewsScreen {
 
     }
 
-    public static void setTimeOnTimeFiled(String time) {
+    public void setTimeOnTimeFiled(String time) {
         Allure.step("Ввод текста <" + time + "> в поле время");
         onView(allOf(withId(newsTimeTextInputID),
                 isDisplayed()))

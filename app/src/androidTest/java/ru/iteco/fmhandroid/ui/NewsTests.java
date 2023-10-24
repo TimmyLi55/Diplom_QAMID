@@ -1,6 +1,9 @@
 package ru.iteco.fmhandroid.ui;
 
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -14,36 +17,57 @@ import ru.iteco.fmhandroid.ui.pom.MainScreen;
 import ru.iteco.fmhandroid.ui.pom.NewsScreen;
 import ru.iteco.fmhandroid.ui.util.CustomMatchers;
 import ru.iteco.fmhandroid.ui.util.GeneralModules;
-import ru.iteco.fmhandroid.ui.util.Rules;
+import ru.iteco.fmhandroid.ui.util.TestAuthData;
 
 @RunWith(AllureAndroidJUnit4.class)
 
-public class NewsTests extends Rules {
+public class NewsTests {
+    @Rule
+    public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
+            new ActivityScenarioRule<>(AppActivity.class);
 
     public static final int ListRVID = R.id.news_list_recycler_view;
 
     @Before
     public void authorisationAndGoToNews() {
-        AuthorizationScreen.authorisation(AuthorizationsTests.getValidLogin(), AuthorizationsTests.getValidPassword());
-        MainScreen.goToNews();
+        authorizationScreen.checkAuthorisationAndLogout();
+        authorizationScreen.authorisation(testAuthData.getValidLogin(), testAuthData.getValidPassword());
+        mainScreen.goToNews();
     }
 
-    static String currentDate = GeneralModules.getDateTime("date");
-    static String currentTime = GeneralModules.getDateTime("time");
 
-    static String endDate = "01.01.2001";
-    static String endTime = "00:00";
+    AddNewsFilterScreen addNewsFilterScreen = new AddNewsFilterScreen();
+    AddNewsScreen addNewsScreen = new AddNewsScreen();
+    AuthorizationScreen authorizationScreen = new AuthorizationScreen();
 
-    static String category = "Объявление";
+    MainScreen mainScreen = new MainScreen();
+    NewsScreen newsScreen = new NewsScreen();
+    GeneralModules generalModules = new GeneralModules();
+    CustomMatchers customMatchers = new CustomMatchers();
+    TestAuthData testAuthData = new TestAuthData();
+
+    String currentDate = generalModules.getDateTime("date");
+    String currentTime = generalModules.getDateTime("time");
+    String endDate = "01.01.2001";
+    String endTime = "00:00";
+    String category = "Объявление";
+    String titleTestNews = "Тестовая новость";
+    String titleTestDescription = "Тестовое описание";
+    String titleNewsElapsedDate = "Новость с прошедшей датой";
+    String titleNewsElapsedTime = "Новость с прошедшим временем";
+
+    String titleNewsFilter = "Тестирование фильтрации";
+
+    String titleNewSorted = "Тестирование сортировки";
 
     @Test
     @DisplayName("Создание пустой новости")
     public void creatingEmptyNews() {
 
-        NewsScreen.clickEditMenuButton();
-        NewsScreen.clickAddNews();
-        AddNewsScreen.clickSaveButton();
-        CustomMatchers.checkToast("Заполните пустые поля");
+        newsScreen.clickEditMenuButton();
+        newsScreen.clickAddNews();
+        addNewsScreen.clickSaveButton();
+        customMatchers.checkToast(addNewsScreen.getToastEmptyFiled());
 
     }
 
@@ -51,7 +75,7 @@ public class NewsTests extends Rules {
     @DisplayName("Создание валидной новости категории \"Объявление\"")
     public void creatingValidNews() {
 
-        NewsScreen.creatingNews(category, "Тестовая новость", currentDate, currentTime, "Тестовое описание");
+        newsScreen.creatingNews(category, titleTestNews, currentDate, currentTime, titleTestDescription);
 
     }
 
@@ -59,12 +83,12 @@ public class NewsTests extends Rules {
     @DisplayName("Создание новости с прошедшей датой")
     public void creatingNewsWithEndDate() {
 
-        NewsScreen.clickEditMenuButton();
-        NewsScreen.clickAddNews();
-        AddNewsScreen.inputTextInFiledType(category);
-        AddNewsScreen.inputTextInFiledTitle("Новость с прошедшей датой" + " " + endDate + " " + currentTime);
-        AddNewsScreen.setDateOnDateFiled(endDate);
-        CustomMatchers.checkToast("Выбор прошедшей даты невозможен!");
+        newsScreen.clickEditMenuButton();
+        newsScreen.clickAddNews();
+        addNewsScreen.inputTextInFiledType(category);
+        addNewsScreen.inputTextInFiledTitle(titleNewsElapsedDate + " " + endDate + " " + currentTime);
+        addNewsScreen.setDateOnDateFiled(endDate);
+        customMatchers.checkToast(addNewsScreen.getToastElapsedDate());
 
 
     }
@@ -73,12 +97,12 @@ public class NewsTests extends Rules {
     @DisplayName("Создание новости с прошедшим временем")
     public void creatingNewsWithEndTime() {
 
-        NewsScreen.clickEditMenuButton();
-        NewsScreen.clickAddNews();
-        AddNewsScreen.inputTextInFiledType(category);
-        AddNewsScreen.inputTextInFiledTitle("Новость с прошедшим временем" + " " + currentDate + " " + endTime);
-        AddNewsScreen.setTimeOnTimeFiled(endTime);
-        CustomMatchers.checkToast("Выбор прошедшего времени невозможен!");
+        newsScreen.clickEditMenuButton();
+        newsScreen.clickAddNews();
+        addNewsScreen.inputTextInFiledType(category);
+        addNewsScreen.inputTextInFiledTitle(titleNewsElapsedTime + " " + currentDate + " " + endTime);
+        addNewsScreen.setTimeOnTimeFiled(endTime);
+        customMatchers.checkToast(addNewsScreen.getToastElapsedTime());
 
 
     }
@@ -88,31 +112,31 @@ public class NewsTests extends Rules {
     @DisplayName("Фильтрация созданной новости с категорией \"Объявление\" в панели управления")
     public void filteringNewsInControlPanel() {
 
-        NewsScreen.creatingNews(category, "Фильтрация", currentDate, currentTime, "Фильтрация описание");
-        NewsScreen.clickFilterButton();
-        AddNewsFilterScreen.inputTextInFiledType(category);
-        AddNewsFilterScreen.setDateOnStartDateFiled(currentDate);
-        AddNewsFilterScreen.setDateOnEndDateFiled(currentDate);
-        AddNewsFilterScreen.clickInactiveCheckBox();
-        AddNewsFilterScreen.clickFilterButton();
-        GeneralModules.scrollByRecViewWithText(NewsScreen.getNewsListRecyclerViewID(), "Фильтрация" + " " + currentDate + " " + currentTime);
+        newsScreen.creatingNews(category, titleNewsFilter, currentDate, currentTime, titleTestDescription);
+        newsScreen.clickFilterButton();
+        addNewsFilterScreen.inputTextInFiledType(category);
+        addNewsFilterScreen.setDateOnStartDateFiled(currentDate);
+        addNewsFilterScreen.setDateOnEndDateFiled(currentDate);
+        addNewsFilterScreen.clickInactiveCheckBox();
+        addNewsFilterScreen.clickFilterButton();
+        generalModules.scrollByRecViewWithText(newsScreen.getNewsListRecyclerViewID(), titleNewsFilter + " " + currentDate + " " + currentTime);
 
     }
 
     @Test
     @DisplayName("Сортировка новости, фокус вверху списка")
     public void sortingNewsFocusTop() throws InterruptedException {
-        String title = "Тестирование сортировки" + " " + currentDate + " " + currentTime;
-        NewsScreen.creatingNews(category, "Тестирование сортировки", currentDate, currentTime, "Тестовое описание");
-        MainScreen.clickMainMenu();
-        MainScreen.clickContentMenuNews();
-        NewsScreen.checkingTextInViewAtTitle();
-        GeneralModules.scrollByRecViewWithText(NewsScreen.getNewsListRecyclerViewID(), title);
-        CustomMatchers.checkTextAtPosition(title, 0);
-        NewsScreen.clickSortButton();
-        NewsScreen.checkingTextAtLastPositionOfNewsList(title, mActivityScenarioRule);
-        NewsScreen.swipeUpScreen(NewsScreen.getNewsListRecyclerViewID());
-        NewsScreen.checkTextIsInvisible(title);
+        String title = titleNewSorted + " " + currentDate + " " + currentTime;
+        newsScreen.creatingNews(category, titleNewSorted, currentDate, currentTime, titleTestDescription);
+        mainScreen.clickMainMenu();
+        mainScreen.clickContentMenuNews();
+        newsScreen.checkingTextInViewAtTitle();
+        generalModules.scrollByRecViewWithText(newsScreen.getNewsListRecyclerViewID(), title);
+        customMatchers.checkTextAtPosition(title, 0);
+        newsScreen.clickSortButton();
+        newsScreen.checkingTextAtLastPositionOfNewsList(title, mActivityScenarioRule);
+        newsScreen.swipeUpScreen(newsScreen.getNewsListRecyclerViewID());
+        newsScreen.checkTextIsInvisible(title);
 
     }
 }
