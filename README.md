@@ -6,3 +6,5 @@
   ```console
   ./gradlew connectedAndroidTest
   ```
+### Отчет о проделанной работе находится по [ссылке](https://github.com/TimmyLi55/Diplom_QAMID/blob/master/Result.md)
+### План тестирования находится по [ссылке](https://github.com/TimmyLi55/Diplom_QAMID/blob/master/Plan.md)
